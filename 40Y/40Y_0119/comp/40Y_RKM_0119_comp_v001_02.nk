@@ -1,21 +1,21 @@
-#! /home/giacomo/Nuke11.0v1/libnuke-11.0.1.so -nx
-version 11.0 v1
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="1" y="25" w="2558" h="1388" screen="0">
+    <window x="0" y="0" w="1904" h="1001" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1895" stretch="1"/>
+            <split size="1241" stretch="1"/>
             <splitter orientation="2">
-                <split size="787"/>
-                <dock id="" activePageId="Viewer.1">
+                <split size="559"/>
+                <dock id="" activePageId="Viewer.1" focus="true">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="553"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <split size="394"/>
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -32,9 +32,9 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name /home/giacomo/Documents/CorsoNuke/REL/40Y/40Y_0119/comp/40Y_RKM_0119_comp_v001_02.nk
- project_directory /home/giacomo/Documents/CorsoNuke/REL/40Y/40Y_0119/
- frame 36
+ name C:/Users/ViFX-Training/Documents/NukeProjects/40Y/40Y_0119/comp/40Y_RKM_0119_comp_v001_02.nk
+ project_directory C:/Users/ViFX-Training/Documenti/NukeProjects/40Y/40Y_0119/
+ frame 34
  last_frame 72
  lock_range true
  format "1784 1080 0 0 1784 1080 1 "
@@ -101,14 +101,14 @@ Read {
  origset true
  name Read1
  xpos -239
- ypos -342
+ ypos -341
 }
 Dot {
  name Dot6
  xpos -205
  ypos -75
 }
-set Nc4300650 [stack 0]
+set N6f852a80 [stack 0]
 Read {
  inputs 0
  file scan/1784x1080/40Y_0119_bg_v01.####.dpx
@@ -118,9 +118,9 @@ Read {
  origset true
  name Read2
  xpos -7
- ypos -345
+ ypos -347
 }
-set N69b0a40 [stack 0]
+set N6f853c00 [stack 0]
 Dot {
  name Dot5
  xpos 188
@@ -144,10 +144,11 @@ Roto {
   {f 0}
   {n
    {layer Root
-    {f 0}
+    {f 2097664}
     {t x445f0000 x44070000}
     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}}}}}
- toolbox {createBezier {
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
   { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
   { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
@@ -167,12 +168,20 @@ Roto {
  toolbar_brush_hardness 0.200000003
  toolbar_source_transform_scale {1 1}
  toolbar_source_transform_center {892 540}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 30
+ lifetime_end 30
+ view {}
+ motionblur_on true
+ motionblur_shutter_offset_type centred
+ source_black_outside true
  name Roto1
  label "Hard Matte"
  xpos -458
- ypos 29
+ ypos 27
 }
-set N6b371d0 [stack 0]
+set N6f888a80 [stack 0]
 Dot {
  name Dot4
  xpos -525
@@ -183,7 +192,7 @@ Dot {
  xpos -525
  ypos 286
 }
-push $N6b371d0
+push $N6f888a80
 RotoPaint {
  curves {{{v x3f99999a}
   {f 0}
@@ -221,26 +230,27 @@ Dot {
  xpos -424
  ypos 182
 }
-push $Nc4300650
+push $N6f852a80
 Grade {
  blackpoint {0.0006070137024 0.0006070137024 0.0009107589722 1}
  whitepoint {0.119034104 0.1379053891 0.1394610554 1}
  black {1.120512024e-06 1.120512024e-06 0.002109002555 0}
  white {0.2052377015 0.2085704803 0.2052377015 0}
  multiply {1.166666627 1.326666713 1.346666574 1}
- add {-0.004 -0.004 -0.004 -0.004}
+ add {-0.004 -0.004 -0.0039 -0.004}
  gamma {0.7616667151 0.7566666603 0.7616667151 1}
  unpremult rgba.alpha
  name Grade1
+ selected true
  xpos -239
- ypos 13
+ ypos 14
 }
 Toe2 {
  lift {{parent.Grade1.black} {parent.Grade1.black} {parent.Grade1.black} {parent.Grade1.black}}
  unpremult rgba.alpha
  name Toe1
  xpos -239
- ypos 69
+ ypos 77
 }
 Transform {
  translate {-890 171}
@@ -262,7 +272,7 @@ Dot {
  xpos -205
  ypos 234
 }
-push $N69b0a40
+push $N6f853c00
 RotoPaint {
  curves {{{v x3f99999a}
   {f 0}
@@ -561,7 +571,7 @@ RotoPaint {
      {tx x42240000 x440feccd x442b5dde}
      {a ro 0 go 0 bo 0 ao 0 bt 1 bu 1 src 1 str 1 spx x445f0000 spy x44070000 sb 1 ltn x42240000 ltm x42240000 ltt x40000000 ep1 1 tt x41c80000}}}}}}
  toolbox {reveal {
-  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { selectAll bm 1 src 3 str 1 ssx 1 ssy 1 sf 1 }
   { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
@@ -599,12 +609,21 @@ RotoPaint {
  ypos 277
 }
 Viewer {
- frame 36
+ frame 34
  frame_range 1-72
+ gamma 4
+ full_frame_processing true
  colour_sample_bbox {0.1793721914 0.144618839 0.1804932803 0.145739913}
  samplepoints {{0.1726457328 0.03363228589 0.1726457328 0.04932735488 0.1726457328 0.06390134245 0.1726457328 0.08183856308 0.1726457328 0.0975336358 0.1760089695 0.1121076196 0.1760089695 0.1188340783 0.1793721914 0.1266816109 0.1793721914 0.1345291436 0.1793721914 0.1412556022 0.1793721914 0.144618839}
    }
  name Viewer1
  xpos -7
  ypos 349
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "* Luci più calde\n* Meno magenta nelle ombre\n* Più dettaglio nelle ombre\n* Hard Matte\n* Soft Matte"
+ xpos -583
+ ypos -263
 }

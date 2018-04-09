@@ -1,48 +1,43 @@
-#! /home/giacomo/Nuke11.0v1/libnuke-11.0.1.so -nx
-version 11.0 v1
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="1" y="25" w="2558" h="1388" screen="0">
+    <window x="0" y="0" w="1904" h="1001" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1895" stretch="1"/>
+            <split size="1241" stretch="1"/>
             <splitter orientation="2">
-                <split size="787"/>
-                <dock id="" activePageId="Viewer.1">
-                    <page id="Viewer.1"/>
-                    <page id="Viewer.2"/>
-                </dock>
-                <split size="553"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <split size="559"/>
+                <splitter orientation="1">
+                    <split size="1241"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                </splitter>
+                <split size="394"/>
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
             <split size="615"/>
-            <splitter orientation="2">
-                <split size="668"/>
-                <dock id="" activePageId="Properties.1">
-                    <page id="Properties.1"/>
-                    <page id="uk.co.thefoundry.backgroundrenderview.1"/>
-                </dock>
-                <split size="672"/>
-                <dock id="" activePageId="Pixel Analyzer.1">
-                    <page id="Pixel Analyzer.1"/>
-                </dock>
-            </splitter>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
         </splitter>
     </window>
 </layout>
 }
 Root {
 inputs 0
-name /home/giacomo/Documents/CorsoNuke/REL/BOT/0010/comp/REL_BOT_0010_comp_v001_01.nk
-project_directory /home/giacomo/Documents/CorsoNuke/REL/BOT/0010/
-frame 61
+name C:/Users/ViFX-Training/Documents/NukeProjects/BOT/0010/comp/REL_BOT_0010_comp_v001_01.nk
+project_directory C:/Users/ViFX-Training/Documents/NukeProjects/BOT/0010/
+frame 12
 last_frame 99
 lock_range true
 format "1920 1080 0 0 1920 1080 1 HD_1080"
@@ -63,82 +58,10 @@ tile_color 0xaaaaaa00
 label <center>BeaGra
 note_font Padauk
 note_font_size 18
-xpos 18
-ypos 358
-bdwidth 125
-bdheight 125
-}
-LayerContactSheet {
-inputs 0
-showLayerNames true
-name LayerContactSheet1
-xpos -79
-ypos -403
-}
-Read {
-inputs 0
-file scan/boat_scan_v01.####.exr
-format "1920 1080 0 0 1920 1080 1 HD_1080"
-last 99
-origlast 99
-origset true
-name Read1
-xpos 530
-ypos -526
-}
-set N7dd7440 [stack 0]
-Dot {
-name Dot8
-xpos 990
-ypos -494
-}
-Tracker4 {
-tracks { { 1 31 1 } 
-{ { 5 1 20 enable e 1 } 
-{ 3 1 75 name name 1 } 
-{ 2 1 58 track_x track_x 1 } 
-{ 2 1 58 track_y track_y 1 } 
-{ 2 1 63 offset_x offset_x 1 } 
-{ 2 1 63 offset_y offset_y 1 } 
-{ 4 1 27 T T 1 } 
-{ 4 1 27 R R 1 } 
-{ 4 1 27 S S 1 } 
-{ 2 0 45 error error 1 } 
-{ 1 1 0 error_min error_min 1 } 
-{ 1 1 0 error_max error_max 1 } 
-{ 1 1 0 pattern_x pattern_x 1 } 
-{ 1 1 0 pattern_y pattern_y 1 } 
-{ 1 1 0 pattern_r pattern_r 1 } 
-{ 1 1 0 pattern_t pattern_t 1 } 
-{ 1 1 0 search_x search_x 1 } 
-{ 1 1 0 search_y search_y 1 } 
-{ 1 1 0 search_r search_r 1 } 
-{ 1 1 0 search_t search_t 1 } 
-{ 2 1 0 key_track key_track 1 } 
-{ 2 1 0 key_search_x key_search_x 1 } 
-{ 2 1 0 key_search_y key_search_y 1 } 
-{ 2 1 0 key_search_r key_search_r 1 } 
-{ 2 1 0 key_search_t key_search_t 1 } 
-{ 2 1 0 key_track_x key_track_x 1 } 
-{ 2 1 0 key_track_y key_track_y 1 } 
-{ 2 1 0 key_track_r key_track_r 1 } 
-{ 2 1 0 key_track_t key_track_t 1 } 
-{ 2 1 0 key_centre_offset_x key_centre_offset_x 1 } 
-{ 2 1 0 key_centre_offset_y key_centre_offset_y 1 } 
-} 
-{ 
- { {curve K x30 1} "track 1" {curve x19 70.2688446 71.72828674 73.67355347 76.14375305 78.85569763 81.81225586 84.49491882 87.19703674 89.34785461 90.97216034 92.38082886 93.59999847 94.79238892 96.56859589 99.06468964 102.3495102 106.3276291 111.3424149 116.9975891 123.5632172 130.8000031 141 151.7563324 164.469696 183.394989} {curve x19 268.5911255 264.0025635 259.9698792 256.0252686 252.0075073 246.5479584 238.8238831 230.5117035 220.5190277 208.9875641 195.8364258 182.6000061 169.8875427 157.5296783 145.7853546 134.2796631 123.233017 112.0099411 100.5287323 88.7467041 75.80000305 61.59999847 41.92178726 20.92650223 -2.399999619} {curve K x30 0 x39 0} {curve K x30 0 x39 0} 1 0 0 {curve x19 0.0002259162773 0.0001607942232 0.000101801586 5.610961602e-05 2.690836044e-05 0.0004253164277 0.0003066137066 0.0002099571894 0.0001363931351 7.363387687e-05 2.909394694e-05 1 2.192880188e-05 7.300047676e-05 0.000143615698 0.0002386645406 0.0003937297312 0.0006326775306 0.0009549602908 6.863259442e-05 0 0 7.736068321e-05 0.001644323898 0} 0 0.00643986 -36 -28.2 36 28.2 -31 -21 31 21 {} {curve x39 79 74 x43 116} {curve x39 35 12 x43 -52} {curve x39 181 207 x43 249} {curve x39 116 109 x43 45} {curve x39 110 105 x43 147} {curve x39 56 33 x43 -31} {curve x39 150 176 x43 218} {curve x39 95 88 x43 24} {curve x39 20.30000305 35.5 x43 35.89498901} {curve x39 19.30000305 28.09999847 x43 28.10000038}  } 
-} 
-}
-
-transform match-move
-reference_frame 25
-translate {{curve x19 -14.22607422 -12.76663208 -10.82136536 -8.351165771 -5.639221191 -2.682662964 0 2.70211792 4.852935791 6.477241516 7.885910034 9.105079651 10.29747009 12.07367706 14.56977081 17.85459137 21.83271027 26.84749603 32.50267029 39.06829834 46.30508423 56.50508118 67.26141357 79.97477722 98.90007019} {curve x19 29.76724243 25.17868042 21.14599609 17.2013855 13.18362427 7.724075317 0 -8.312179565 -18.30485535 -29.83631897 -42.98745728 -56.22387695 -68.93634033 -81.29420471 -93.03852844 -104.54422 -115.5908661 -126.813942 -138.2951508 -150.077179 -163.02388 -177.223877 -196.9020996 -217.8973846 -241.223877}}
-center {{curve x19 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882} {curve x19 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831}}
-selected_tracks 0
-name Tracker1
-xpos 956
-ypos 3
+xpos 14
+ypos 353
+bdwidth 133
+bdheight 175
 }
 Roto {
 inputs 0
@@ -796,13 +719,23 @@ name Invert1
 xpos 954
 ypos 102
 }
-push $N7dd7440
+Read {
+inputs 0
+file scan/boat_scan_v01.####.exr
+format "1920 1080 0 0 1920 1080 1 HD_1080"
+last 99
+origlast 99
+origset true
+name Read1
+xpos 530
+ypos -525
+}
 Dot {
 name Dot21
 xpos 564
-ypos 111
+ypos 112
 }
-set N41061370 [stack 0]
+set N382b3880 [stack 0]
 Merge2 {
 inputs 2
 operation stencil
@@ -824,229 +757,229 @@ last 99
 origlast 99
 origset true
 name Read2
-xpos -437
-ypos -508
+xpos -438
+ypos -507
 }
 Dot {
 name Dot5
-xpos -403
-ypos -347
+xpos -404
+ypos -346
 }
-set N7c35890 [stack 0]
+set N38334700 [stack 0]
 Dot {
 name Dot4
-xpos -403
+xpos -404
 ypos 186
 }
-push $N7c35890
+push $N38334700
 Dot {
 name Dot9
-xpos -308
-ypos -347
+xpos -309
+ypos -346
 }
-set N8cfe8c0 [stack 0]
+set N38334000 [stack 0]
 Dot {
 name Dot10
-xpos -163
-ypos -347
+xpos -164
+ypos -346
 }
-set Nb793d20 [stack 0]
+set N38335c00 [stack 0]
 Dot {
 name Dot7
-xpos -53
-ypos -347
+xpos -54
+ypos -346
 }
-set Na4fdb60 [stack 0]
+set N38335880 [stack 0]
 Dot {
 name Dot11
-xpos 46
-ypos -347
+xpos 45
+ypos -346
 }
-set N18ddeb0 [stack 0]
+set N38335500 [stack 0]
 Dot {
 name Dot12
-xpos 151
-ypos -347
+xpos 150
+ypos -346
 }
-set N941c3d0 [stack 0]
+set N38335180 [stack 0]
 Dot {
 name Dot13
-xpos 261
-ypos -347
+xpos 260
+ypos -346
 }
-set N89b2010 [stack 0]
+set N38353500 [stack 0]
 add_layer {refract refract.red refract.green refract.blue}
 Shuffle {
 in refract
 name Shuffle7
 label "\[value in]"
-xpos 227
+xpos 226
 ypos -184
 postage_stamp true
 }
 Grade {
 multiply 0.94
 name Grade7
-xpos 227
+xpos 226
 ypos -102
 }
 Dot {
 name Dot2
-xpos 261
+xpos 260
 ypos -13
 }
-push $N89b2010
+push $N38353500
 Dot {
 name Dot14
-xpos 367
-ypos -347
+xpos 366
+ypos -346
 }
-set Nff90f30 [stack 0]
+set N38352700 [stack 0]
 add_layer {refractionFilter refractionFilter.red refractionFilter.green refractionFilter.blue}
 Shuffle {
 in refractionFilter
 name Shuffle8
 label "\[value in]"
-xpos 333
+xpos 332
 ypos -184
 postage_stamp true
 }
 Grade {
 name Grade8
-xpos 333
+xpos 332
 ypos -98
 }
 Merge2 {
 inputs 2
 operation multiply
 name Merge2
-xpos 333
+xpos 332
 ypos -16
 }
 Dot {
 name Dot15
-xpos 367
+xpos 366
 ypos 121
 }
-push $N18ddeb0
+push $N38335500
 add_layer {reflect reflect.red reflect.green reflect.blue}
 Shuffle {
 in reflect
 name Shuffle5
 label "\[value in]"
-xpos 12
+xpos 11
 ypos -184
 postage_stamp true
 }
 Grade {
 multiply 0.5
 name Grade5
-xpos 12
+xpos 11
 ypos -96
 }
 Dot {
 name Dot3
-xpos 46
+xpos 45
 ypos -15
 }
-push $N941c3d0
+push $N38335180
 add_layer {reflectionFilter reflectionFilter.red reflectionFilter.green reflectionFilter.blue}
 Shuffle {
 in reflectionFilter
 name Shuffle6
 label "\[value in]"
-xpos 117
+xpos 116
 ypos -184
 postage_stamp true
 }
 Grade {
 name Grade6
-xpos 117
+xpos 116
 ypos -98
 }
 Merge2 {
 inputs 2
 operation multiply
 name Merge3
-xpos 117
+xpos 116
 ypos -18
 }
 Dot {
 name Dot16
-xpos 151
+xpos 150
 ypos 32
 }
-push $Na4fdb60
+push $N38335880
 add_layer {GI GI.red GI.green GI.blue}
 Shuffle {
 in GI
 name Shuffle4
 label "\[value in]"
-xpos -87
+xpos -88
 ypos -184
 postage_stamp true
 }
 Grade {
 multiply 0.9
 name Grade4
-xpos -87
+xpos -88
 ypos -96
 }
 Dot {
 name Dot19
-xpos -53
+xpos -54
 ypos 20
 }
 push 0
 push 0
-push $N8cfe8c0
+push $N38334000
 add_layer {specular specular.red specular.green specular.blue}
 Shuffle {
 in specular
 alpha red
 name Shuffle1
 label "\[value in]"
-xpos -342
+xpos -343
 ypos -184
 postage_stamp true
 }
 Grade {
 multiply 0.16
 name Grade1
-xpos -342
+xpos -343
 ypos -94
 }
 Dot {
 name Dot17
-xpos -308
+xpos -309
 ypos 121
 }
-push $Nb793d20
+push $N38335c00
 add_layer {SunLight SunLight.red SunLight.green SunLight.blue}
 Shuffle {
 in SunLight
 name Shuffle2
 label "\[value in]"
-xpos -197
+xpos -198
 ypos -184
 postage_stamp true
 }
 Grade {
 multiply 0.76
 name Grade2
-xpos -197
+xpos -198
 ypos -98
 }
 Dot {
 name Dot18
-xpos -163
+xpos -164
 ypos 50
 }
 Merge2 {
 inputs 6+1
 operation plus
 name Merge4
-xpos 37
+xpos 36
 ypos 118
 }
 Copy {
@@ -1054,31 +987,33 @@ inputs 2
 from0 rgba.alpha
 to0 rgba.alpha
 name Copy1
-xpos 37
+xpos 36
 ypos 177
 }
 Remove {
 operation keep
 channels rgba
 name Remove2
-xpos 37
+xpos 36
 ypos 218
 }
 Grade {
-blackpoint {0.0003596305614 0.000284099573 0.0002104997548 1}
-whitepoint {0.1992165744 0.1885975599 0.1614039242 1}
-black {0.0004275083484 0.0008509635809 0.0003803491709 1}
+blackpoint {0 0 0 1}
+whitepoint {0.3771999478 0.3467573524 0.2967948318 1}
+black {0.0004150867462 0.0002030134201 0.0001104474068 1}
 white {0.8546125293 0.8424994946 0.8256088495 1}
-add {0.003800000064 0.003500000108 0.002499999944 0}
-gamma {0.8793333173 0.8313333392 0.7793332934 1}
+multiply {0.8499999642 0.8100000024 0.7699999809 1}
+add {0.007057888899 0.01108288858 0.007107888814 0}
+gamma {0.8193332553 0.8313333392 0.8393332362 1}
 maskChannelInput -rgba.alpha
 unpremult rgba.alpha
 name Grade3
-xpos 37
-ypos 379
+xpos 38
+ypos 399
 }
 ColorCorrect {
-saturation 0.34
+saturation 0.68
+contrast 0.98
 gamma 0.94
 shadows.contrast 1.18
 shadows.gamma 1.08
@@ -1090,26 +1025,26 @@ lookup {shadow {}
   highlight {curve x0.3375273347 0 s0 x0.7106126547 1 s0}}
 unpremult rgba.alpha
 name ColorCorrect1
-xpos 37
-ypos 414
+xpos 38
+ypos 441
 }
 Toe2 {
 lift {{parent.Grade3.black} {parent.Grade3.black} {parent.Grade3.black} {parent.Grade3.black}}
 unpremult rgba.alpha
 name Toe1
 xpos 38
-ypos 449
+ypos 485
 }
 Dot {
 name Dot1
 xpos 72
 ypos 663
 }
-push $Nff90f30
+push $N38352700
 Dot {
 name Dot20
 xpos 715
-ypos -347
+ypos -346
 }
 add_layer {Shadow Shadow.alpha}
 Shuffle {
@@ -1117,7 +1052,7 @@ in Shadow
 name Shuffle3
 label "\[value in]"
 xpos 681
-ypos -167
+ypos -184
 postage_stamp true
 }
 Remove {
@@ -1125,20 +1060,22 @@ operation keep
 channels alpha
 name Remove1
 xpos 681
-ypos -85
+ypos -102
 }
 Dot {
 name Dot6
 xpos 715
-ypos 246
+ypos 247
 }
-push $N41061370
+push $N382b3880
 Grade {
 inputs 1+1
-multiply 0.035
+multiply {0.01933333278 0.02133333497 0.01933333278 0.01600000076}
+gamma {1.029999971 1.029999971 1.029999971 1}
 name Grade9
+selected true
 xpos 530
-ypos 243
+ypos 244
 }
 Merge2 {
 inputs 3+1
@@ -1147,14 +1084,77 @@ xpos 530
 ypos 660
 }
 Viewer {
-frame 61
+frame 12
 frame_range 1-99
 frame_range_lock true
 full_frame_processing true
-colour_sample_bbox {-0.9104166627 -0.3458333313 -0.9093750119 -0.3447916806}
+colour_sample_bbox {-0.2239583284 -0.002039999934 -0.2228800058 0.00316000008}
 samplepoints {{-0.9104166627 -0.3458333313}
   }
 name Viewer1
 xpos 530
 ypos 775
+}
+Tracker4 {
+inputs 0
+tracks { { 1 31 1 } 
+{ { 5 1 20 enable e 1 } 
+{ 3 1 75 name name 1 } 
+{ 2 1 58 track_x track_x 1 } 
+{ 2 1 58 track_y track_y 1 } 
+{ 2 1 63 offset_x offset_x 1 } 
+{ 2 1 63 offset_y offset_y 1 } 
+{ 4 1 27 T T 1 } 
+{ 4 1 27 R R 1 } 
+{ 4 1 27 S S 1 } 
+{ 2 0 45 error error 1 } 
+{ 1 1 0 error_min error_min 1 } 
+{ 1 1 0 error_max error_max 1 } 
+{ 1 1 0 pattern_x pattern_x 1 } 
+{ 1 1 0 pattern_y pattern_y 1 } 
+{ 1 1 0 pattern_r pattern_r 1 } 
+{ 1 1 0 pattern_t pattern_t 1 } 
+{ 1 1 0 search_x search_x 1 } 
+{ 1 1 0 search_y search_y 1 } 
+{ 1 1 0 search_r search_r 1 } 
+{ 1 1 0 search_t search_t 1 } 
+{ 2 1 0 key_track key_track 1 } 
+{ 2 1 0 key_search_x key_search_x 1 } 
+{ 2 1 0 key_search_y key_search_y 1 } 
+{ 2 1 0 key_search_r key_search_r 1 } 
+{ 2 1 0 key_search_t key_search_t 1 } 
+{ 2 1 0 key_track_x key_track_x 1 } 
+{ 2 1 0 key_track_y key_track_y 1 } 
+{ 2 1 0 key_track_r key_track_r 1 } 
+{ 2 1 0 key_track_t key_track_t 1 } 
+{ 2 1 0 key_centre_offset_x key_centre_offset_x 1 } 
+{ 2 1 0 key_centre_offset_y key_centre_offset_y 1 } 
+} 
+{ 
+ { {curve K x30 1} "track 1" {curve x19 70.2688446 71.72828674 73.67355347 76.14375305 78.85569763 81.81225586 84.49491882 87.19703674 89.34785461 90.97216034 92.38082886 93.59999847 94.79238892 96.56859589 99.06468964 102.3495102 106.3276291 111.3424149 116.9975891 123.5632172 130.8000031 141 151.7563324 164.469696 183.394989} {curve x19 268.5911255 264.0025635 259.9698792 256.0252686 252.0075073 246.5479584 238.8238831 230.5117035 220.5190277 208.9875641 195.8364258 182.6000061 169.8875427 157.5296783 145.7853546 134.2796631 123.233017 112.0099411 100.5287323 88.7467041 75.80000305 61.59999847 41.92178726 20.92650223 -2.399999619} {curve K x30 0 x39 0} {curve K x30 0 x39 0} 1 0 0 {curve x19 0.0002259162773 0.0001607942232 0.000101801586 5.610961602e-05 2.690836044e-05 0.0004253164277 0.0003066137066 0.0002099571894 0.0001363931351 7.363387687e-05 2.909394694e-05 1 2.192880188e-05 7.300047676e-05 0.000143615698 0.0002386645406 0.0003937297312 0.0006326775306 0.0009549602908 6.863259442e-05 0 0 7.736068321e-05 0.001644323898 0} 0 0.00643986 -36 -28.2 36 28.2 -31 -21 31 21 {curve} {curve x39 79 74 x43 116} {curve x39 35 12 x43 -52} {curve x39 181 207 x43 249} {curve x39 116 109 x43 45} {curve x39 110 105 x43 147} {curve x39 56 33 x43 -31} {curve x39 150 176 x43 218} {curve x39 95 88 x43 24} {curve x39 20.30000305 35.5 x43 35.89498901} {curve x39 19.30000305 28.09999847 x43 28.10000038}  } 
+} 
+}
+
+transform match-move
+reference_frame 25
+translate {{curve x19 -14.22607422 -12.76663208 -10.82136536 -8.351165771 -5.639221191 -2.682662964 0 2.70211792 4.852935791 6.477241516 7.885910034 9.105079651 10.29747009 12.07367706 14.56977081 17.85459137 21.83271027 26.84749603 32.50267029 39.06829834 46.30508423 56.50508118 67.26141357 79.97477722 98.90007019} {curve x19 29.76724243 25.17868042 21.14599609 17.2013855 13.18362427 7.724075317 0 -8.312179565 -18.30485535 -29.83631897 -42.98745728 -56.22387695 -68.93634033 -81.29420471 -93.03852844 -104.54422 -115.5908661 -126.813942 -138.2951508 -150.077179 -163.02388 -177.223877 -196.9020996 -217.8973846 -241.223877}}
+center {{curve x19 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882 84.49491882} {curve x19 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831 238.8238831}}
+selected_tracks 0
+name Tracker1
+xpos 956
+ypos 3
+}
+LayerContactSheet {
+inputs 0
+showLayerNames true
+name LayerContactSheet1
+xpos -128
+ypos -468
+}
+StickyNote {
+inputs 0
+name StickyNote1
+label "* Rifare Black Point & White Point"
+xpos -285
+ypos -539
 }

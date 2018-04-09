@@ -1,20 +1,23 @@
-#! /home/giacomo/Nuke11.0v1/libnuke-11.0.1.so -nx
-version 11.0 v1
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="1" y="25" w="2558" h="1388" screen="0">
+    <window x="0" y="0" w="1904" h="1001" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1895" stretch="1"/>
+            <split size="1241" stretch="1"/>
             <splitter orientation="2">
-                <split size="787"/>
-                <dock id="" activePageId="Viewer.1">
-                    <page id="Viewer.1"/>
-                </dock>
-                <split size="553"/>
+                <split size="559"/>
+                <splitter orientation="1">
+                    <split size="1241"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                </splitter>
+                <split size="394"/>
                 <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
@@ -22,19 +25,25 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1">
-                <page id="Properties.1"/>
-                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
-            </dock>
+            <splitter orientation="2">
+                <split size="629"/>
+                <dock id="" activePageId="Properties.1">
+                    <page id="Properties.1"/>
+                </dock>
+                <split size="324"/>
+                <dock id="" activePageId="Pixel Analyzer.1">
+                    <page id="Pixel Analyzer.1"/>
+                </dock>
+            </splitter>
         </splitter>
     </window>
 </layout>
 }
 Root {
  inputs 0
- name /home/giacomo/Documents/CorsoNuke/REL/TERGO/0010/comp/TERGO_0010_comp_v001_01.nk
- project_directory /home/giacomo/Documents/CorsoNuke/REL/TERGO/0010/
- frame 49
+ name C:/Users/ViFX-Training/Documents/NukeProjects/TERGO/0010/comp/TERGO_0010_comp_v001_01.nk
+ project_directory C:/Users/ViFX-Training/Documenti/NukeProjects/TERGO/0010/
+ frame 18
  last_frame 108
  lock_range true
  format "1920 1080 0 0 1920 1080 1 HD_1080"
@@ -81,13 +90,13 @@ Read {
  xpos -750
  ypos -809
 }
-set N5bed6b0 [stack 0]
+set N7c82380 [stack 0]
 Dot {
  name Dot3
  xpos -715
  ypos -694
 }
-set N5bd1a00 [stack 0]
+set N7c83180 [stack 0]
 Dot {
  name Dot6
  xpos -1017
@@ -120,77 +129,77 @@ Dot {
  xpos -844
  ypos -222
 }
-set N5c537a0 [stack 0]
+set N7c83500 [stack 0]
 Dot {
  name Dot14
  xpos -844
  ypos -160
 }
-set N5c57da0 [stack 0]
+set N7cbee00 [stack 0]
 Dot {
  name Dot15
  xpos -844
  ypos -102
 }
-set N5c5c5c0 [stack 0]
+set N7cbea80 [stack 0]
 Dot {
  name Dot16
  xpos -844
  ypos -44
 }
-set N5c60e30 [stack 0]
+set N7cbe700 [stack 0]
 Dot {
  name Dot17
  xpos -844
  ypos 18
 }
-set N5c656a0 [stack 0]
+set N7cbe380 [stack 0]
 Dot {
  name Dot18
  xpos -844
  ypos 86
 }
-push $N5c60e30
-push $N5c5c5c0
-push $N5c57da0
-push $N5c537a0
-push $N5bd1a00
+push $N7cbe700
+push $N7cbea80
+push $N7cbee00
+push $N7c83500
+push $N7c83180
 Dot {
  name Dot4
  xpos -715
  ypos -270
 }
-push $N5bd1a00
+push $N7c83180
 Dot {
  name Dot5
  xpos -607
  ypos -693
 }
-set N5c73080 [stack 0]
+set N7cbf880 [stack 0]
 Dot {
  name Dot7
  xpos -432
  ypos -693
 }
-set N5c778f0 [stack 0]
+set N7cbf500 [stack 0]
 Dot {
  name Dot8
  xpos -322
  ypos -693
 }
-set N5c7c230 [stack 0]
+set N7cbf180 [stack 0]
 Dot {
  name Dot9
  xpos -218
  ypos -693
 }
-set N5c80a50 [stack 0]
+set N7cdb500 [stack 0]
 Dot {
  name Dot10
  xpos -118
  ypos -693
 }
-set N5c852c0 [stack 0]
+set N7cdb180 [stack 0]
 Dot {
  name Dot11
  xpos -19
@@ -210,7 +219,7 @@ Grade {
  xpos -53
  ypos -521
 }
-push $N5c852c0
+push $N7cdb180
 add_layer {refract refract.red refract.green refract.blue}
 Shuffle {
  in refract
@@ -224,7 +233,7 @@ Grade {
  xpos -152
  ypos -521
 }
-push $N5c80a50
+push $N7cdb500
 add_layer {reflect reflect.red reflect.green reflect.blue}
 Shuffle {
  in reflect
@@ -244,9 +253,9 @@ ColorCorrect {
  xpos -252
  ypos -495
 }
-set N5cf04a0 [stack 0]
+set N7d13c00 [stack 0]
 push 0
-push $N5c778f0
+push $N7cbf500
 add_layer {GI GI.red GI.green GI.blue}
 Shuffle {
  in GI
@@ -261,7 +270,7 @@ Grade {
  xpos -466
  ypos -521
 }
-push $N5c7c230
+push $N7cbf180
 add_layer {lighting lighting.red lighting.green lighting.blue}
 Shuffle {
  in lighting
@@ -290,7 +299,7 @@ Merge2 {
  xpos -249
  ypos -400
 }
-push $N5c73080
+push $N7cbf880
 add_layer {shadow shadow.red shadow.green shadow.blue}
 Shuffle {
  in shadow
@@ -364,9 +373,9 @@ Copy {
  xpos -249
  ypos -61
 }
-set N5ddf360 [stack 0]
-push $N5c656a0
-push $N5ddf360
+set N184bc700 [stack 0]
+push $N7cbe380
+push $N184bc700
 add_layer {multimatte3 multimatte3.red multimatte3.green multimatte3.blue}
 Copy {
  inputs 2+1
@@ -396,21 +405,21 @@ Remove {
  xpos -249
  ypos 140
 }
-set N5e08ad0 [stack 0]
+set N184ffc00 [stack 0]
 LayerContactSheet {
  showLayerNames true
  name LayerContactSheet2
  xpos -432
  ypos 146
 }
-push $N5bed6b0
+push $N7c82380
 LayerContactSheet {
  showLayerNames true
  name LayerContactSheet1
  xpos 38
  ypos -778
 }
-push $N5cf04a0
+push $N7d13c00
 Roto {
  inputs 0
  output alpha
@@ -478,7 +487,7 @@ RotoPaint {
  xpos -498
  ypos 652
 }
-push $N5e08ad0
+push $N184ffc00
 LensDistortion2 {
  distortionModelDisplayX "xu = xd / (1 + k0 * rd^2 + k1 * rd^4)"
  distortionModelDisplayY "yu = yd / (1 + k0 * rd^2 + k1 * rd^4)"
@@ -503,11 +512,16 @@ entries 0
  ypos 324
 }
 Grade {
- black {0 0 0 0}
+ blackpoint {0 0 0 1}
+ whitepoint {0.8860090971 0.9085472822 0.6295039654 0.9999999404}
+ black {0.0003232627932 0.002355917124 0.002338375431 0}
+ white {0.8802142143 1.325556159 1.572919846 1}
+ multiply {1.204999924 0.8999999166 0.5949999094 1}
+ add {0 0.001561 0 0}
  unpremult rgba.alpha
  name Grade1
  xpos -249
- ypos 484
+ ypos 475
  bookmark true
 }
 Toe2 {
@@ -515,7 +529,7 @@ Toe2 {
  unpremult rgba.alpha
  name Toe1
  xpos -249
- ypos 518
+ ypos 513
  bookmark true
 }
 Merge2 {
@@ -538,7 +552,6 @@ Read {
  origlast 108
  origset true
  name Read3
- selected true
  xpos 415
  ypos -809
 }
@@ -572,7 +585,7 @@ Dot {
 }
 Read {
  inputs 0
- file scans/Tergo02_s010_EXR/Tergo02_s010_###.exr
+ file scan/Tergo02_s010_EXR/Tergo02_s010_###.exr
  format "2400 1350 0 0 2400 1350 1 "
  last 108
  origlast 108
@@ -602,8 +615,20 @@ Merge2 {
 }
 Viewer {
  inputs 2
+ frame 18
  frame_range 1-108
+ full_frame_processing true
+ colour_sample_bbox {0.203125 -0.2843750119 0.2041666657 -0.2833333313}
+ samplepoints {{0.203125 -0.2843750119}
+   }
  name Viewer1
  xpos 215
  ypos 868
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "* Hard Matte\t\n* Soft Matte \n* Z defocus\n* Soft Point\n* Motion Blur Matte\n* Rifare Black Point & White Point\n* Glare Finestra DX "
+ xpos -1124
+ ypos -951
 }

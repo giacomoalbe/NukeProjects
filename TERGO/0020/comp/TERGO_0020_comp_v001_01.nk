@@ -1,21 +1,21 @@
-#! /home/giacomo/Nuke11.0v1/libnuke-11.0.1.so -nx
-version 11.0 v1
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="1" y="25" w="2558" h="1388" screen="0">
+    <window x="-8" y="-8" w="1920" h="1017" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1895" stretch="1"/>
+            <split size="1257" stretch="1"/>
             <splitter orientation="2">
-                <split size="787"/>
-                <dock id="" activePageId="Viewer.1">
+                <split size="568"/>
+                <dock id="" activePageId="Viewer.1" focus="true">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="553"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <split size="401"/>
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -24,7 +24,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="615"/>
             <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
-                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Pixel Analyzer.1"/>
             </dock>
         </splitter>
     </window>
@@ -32,9 +32,9 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name /home/giacomo/Documents/CorsoNuke/REL/TERGO/0020/comp/TERGO_0020_comp_v001_01.nk
- project_directory /home/giacomo/Documents/CorsoNuke/REL/TERGO/0020/
- frame 94
+ name C:/Users/ViFX-Training/Documents/NukeProjects/TERGO/0020/comp/TERGO_0020_comp_v001_01.nk
+ project_directory C:/Users/ViFX-Training/Documenti/NukeProjects/TERGO/0020/
+ frame 67
  last_frame 110
  lock_range true
  format "1920 1080 0 0 1920 1080 1 HD_1080"
@@ -56,8 +56,8 @@ BackdropNode {
  note_font_size 30
  xpos 32
  ypos -121
- bdwidth 186
- bdheight 163
+ bdwidth 182
+ bdheight 179
 }
 BackdropNode {
  inputs 0
@@ -87,8 +87,9 @@ BackdropNode {
  tile_color 0x7f5f0001
  label "<center><img src=\"Read.png\"> BG PLATE"
  note_font_size 30
+ selected true
  xpos 661
- ypos -1145
+ ypos -1147
  bdwidth 250
  bdheight 245
 }
@@ -118,8 +119,9 @@ Read {
  origlast 110
  origset true
  name Read7
+ selected true
  xpos 1107
- ypos -1104
+ ypos -1106
 }
 LensDistortion2 {
  distortionModelDisplayX "xu = xd / (1 + k0 * rd^2 + k1 * rd^4)"
@@ -140,40 +142,46 @@ entries 0
 "
  name LensDistortion2
  label "Zeiss 21mm"
+ selected true
  xpos 1107
- ypos -1022
+ ypos -1024
 }
 Dot {
  name Dot17
+ selected true
  xpos 1141
- ypos -462
+ ypos -464
 }
 Read {
  inputs 0
- file scans/Tergo02_s020_EXR/Tergo02_s020_###.exr
+ file scan/Tergo02_s020_EXR/Tergo02_s020_###.exr
  format "2400 1350 0 0 2400 1350 1 "
  last 110
  origlast 110
  origset true
  name Read5
+ selected true
  xpos 730
- ypos -1058
+ ypos -1064
 }
 Reformat {
  format "1920 1080 0 0 1920 1080 1 HD_1080"
  name Reformat2
  label "Tergo Delivery Format"
+ selected true
  xpos 730
- ypos -976
+ ypos -978
 }
 Grade {
  inputs 1+1
- black {-0.03500000015 -0.03500000015 -0.03500000015 0}
+ black {-0.01533333305 -0.009333332069 -0.01133333333 0}
+ gamma {1.004999995 1.00999999 1.075000048 1}
  name Grade9
+ selected true
  xpos 730
- ypos -466
+ ypos -468
 }
-set Nbd6ca70 [stack 0]
+set N4a96e700 [stack 0]
 Roto {
  inputs 0
  output alpha
@@ -257,43 +265,43 @@ Dot {
  xpos -518
  ypos -857
 }
-set Nbe6d3e0 [stack 0]
+set N4a96f880 [stack 0]
 Dot {
  name Dot4
  xpos -518
  ypos -366
 }
-push $Nbe6d3e0
+push $N4a96f880
 Dot {
  name Dot5
  xpos -282
  ypos -857
 }
-set Nbe76250 [stack 0]
+set N4a96f180 [stack 0]
 Dot {
  name Dot7
  xpos -124
  ypos -857
 }
-set Nbe7ab90 [stack 0]
+set N5c929500 [stack 0]
 Dot {
  name Dot8
  xpos -14
  ypos -857
 }
-set Nbe7f370 [stack 0]
+set N5c929180 [stack 0]
 Dot {
  name Dot9
  xpos 96
  ypos -857
 }
-set Nbe83c40 [stack 0]
+set N5c928e00 [stack 0]
 Dot {
  name Dot10
  xpos 206
  ypos -857
 }
-set Nbe884b0 [stack 0]
+set N5c928a80 [stack 0]
 Dot {
  name Dot11
  xpos 316
@@ -312,7 +320,7 @@ Grade {
  xpos 282
  ypos -754
 }
-push $Nbe884b0
+push $N5c928a80
 add_layer {refract refract.red refract.green refract.blue}
 Shuffle {
  in refract
@@ -326,7 +334,7 @@ Grade {
  xpos 172
  ypos -754
 }
-push $Nbe83c40
+push $N5c928e00
 add_layer {reflect reflect.red reflect.green reflect.blue}
 Shuffle {
  in reflect
@@ -340,7 +348,7 @@ Grade {
  xpos 62
  ypos -754
 }
-push $Nbe7f370
+push $N5c929180
 add_layer {lighting lighting.red lighting.green lighting.blue}
 Shuffle {
  in lighting
@@ -356,7 +364,7 @@ Grade {
 }
 push 0
 push 0
-push $Nbe7ab90
+push $N5c929500
 add_layer {GI GI.red GI.green GI.blue}
 Shuffle {
  in GI
@@ -377,7 +385,7 @@ Merge2 {
  xpos 80
  ypos -610
 }
-push $Nbe76250
+push $N4a96f180
 add_layer {shadow shadow.red shadow.green shadow.blue}
 Shuffle {
  in shadow
@@ -442,17 +450,25 @@ Reformat {
  disable true
 }
 Grade {
- black {0 0 0 0}
+ blackpoint {0 0 0 1}
+ whitepoint {1.1862185 1.029554963 0.7945482135 0.001021658303}
+ black {5.22585924e-06 3.713338401e-06 3.870014552e-06 0}
+ white {0.50527215 0.6761548519 0.575976491 0}
+ multiply {1.455133319 1.359733224 1.265133381 1}
+ add {0 0.00132 0 0}
+ gamma {1.157500029 1.139999986 1.122500062 1}
+ unpremult rgba.alpha
  name Grade1
  xpos 80
- ypos -27
+ ypos -32
  bookmark true
 }
 Toe2 {
  lift {{parent.Grade1.black} {parent.Grade1.black} {parent.Grade1.black} {parent.Grade1.black}}
+ unpremult rgba.alpha
  name Toe1
  xpos 80
- ypos -1
+ ypos 10
  bookmark true
 }
 Merge2 {
@@ -467,7 +483,7 @@ Dot {
  xpos 114
  ypos 277
 }
-push $Nbd6ca70
+push $N4a96e700
 Merge2 {
  inputs 2
  name Merge2
@@ -476,8 +492,12 @@ Merge2 {
 }
 Viewer {
  inputs 2
- frame 94
+ frame 67
  frame_range 1-110
+ full_frame_processing true
+ colour_sample_bbox {0.6677083373 -0.178124994 0.6687499881 -0.1770833284}
+ samplepoints {{0.4645833373 -0.1322916597}
+   }
  name Viewer1
  xpos 730
  ypos 379
@@ -485,7 +505,7 @@ Viewer {
 StickyNote {
  inputs 0
  name StickyNote1
- label "* Camera Tracking\n* Common Look to CG\n"
- xpos -170
- ypos -1054
+ label "* Camera Tracking\n* Black & White Level\n* Effetto luce della macchina (pass Light) \n* Ombra troppo dura\n* Lightwrap"
+ xpos -177
+ ypos -1065
 }
