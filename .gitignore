@@ -5,8 +5,12 @@
 /*/*/slap
 /*/*/data
 
+**/*.nk~
+
 !.gitignore
 !README.md
 # Whitelist only roto and comp folder
 !roto/*
 !comp/*
+
+
