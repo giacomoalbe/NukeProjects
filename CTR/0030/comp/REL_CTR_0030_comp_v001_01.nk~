@@ -1,0 +1,158 @@
+#! C:/Program Files/Nuke11.0v1/nuke-11.0.1.dll -nx
+version 11.0 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1041" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1241" stretch="1"/>
+            <splitter orientation="2">
+                <split size="583"/>
+                <dock id="" activePageId="Viewer.1" focus="true">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="410"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Desktop/Giacomo/projetcs/REL/CTR/0030/comp/REL_CTR_0030_comp_v001_01.nk
+ frame 159
+ last_frame 328
+ lock_range true
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file C:/Users/ViFX-Training/Desktop/Giacomo/projetcs/REL/CTR/0030/asset/graffiti_with_alpha.png
+ format "2373 1448 0 0 2373 1448 1 "
+ origset true
+ name Read1
+ xpos 232
+ ypos -99
+}
+Read {
+ inputs 0
+ file C:/Users/ViFX-Training/Desktop/Giacomo/projetcs/REL/CTR/0030/scan/1920x1080/ST_040_bg_v01_p1.####.tif
+ format "960 540 0 0 960 540 1 "
+ last 328
+ origlast 328
+ origset true
+ name Read2
+ xpos -150
+ ypos -160
+}
+Roto {
+ output {rgba.alpha none none mask_planartrack.a}
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x43f00000 x43870000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {layer PlanarTrackLayer1
+     {f 2097152}
+     {t 0}
+     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 pt 1 ptrefset 0 ptmot x40800000 ptref 0}
+     {curvegroup BezierCusped2 512 bezier
+      {{cc
+        {f 8192}
+        {px x431f0000
+	 {0 0}
+	 {x43d61111 x43c1b333}
+	 {0 0}
+	 {0 0}
+	 {x43d86222 x43930444}
+	 {0 0}
+	 {0 0}
+	 {x43f91dde x43943bbc}
+	 {0 0}
+	 {0 0}
+	 {x43f6f778 x43c24ccd}
+	 {0 0}}}      idem}
+      {tx x431f0000 x43e74ccd x43ab2000}
+      {a osw x41200000 osf 0 str 1 spx x43f00000 spy x43870000 sb 1 ltn x431f0000 ltm x431f0000 tt x40a00000 pt 1}}
+     {curvegroup BezierCusped1 512 bezier
+      {{cc
+        {f 8192}
+        {px x431f0000
+	 {0 0}
+	 {x43dc8000 x4392c000}
+	 {0 0}
+	 {0 0}
+	 {x43de0000 x43518000}
+	 {0 0}
+	 {0 0}
+	 {x44220000 x435d0000}
+	 {0 0}
+	 {0 0}
+	 {x44204000 x43978000}
+	 {0 0}}}      idem}
+      {tx x431f0000 x4407e000 x43806000}
+      {a osw x41200000 osf 0 str 1 spx x43f00000 spy x43870000 sb 1 ltn x431f0000 ltm x431f0000 tt x40a00000 pt 1}}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 tt 5 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {480 270}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 159
+ lifetime_end 159
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ is_pt_node true
+ name Roto1
+ selected true
+ xpos -150
+ ypos -74
+}
+Viewer {
+ frame 159
+ frame_range 1-328
+ name Viewer1
+ xpos -68
+ ypos 62
+}

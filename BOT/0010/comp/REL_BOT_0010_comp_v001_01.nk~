@@ -1,0 +1,312 @@
+#! C:/Program Files/Nuke11.0v1/nuke-11.0.1.dll -nx
+version 11.0 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1041" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="838" stretch="1"/>
+            <splitter orientation="2">
+                <split size="625"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="368"/>
+                <splitter orientation="1">
+                    <split size="838"/>
+                    <dock id="" activePageId="Properties.1">
+                        <page id="Properties.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="1018"/>
+            <splitter orientation="2">
+                <split size="707"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+                <split size="286"/>
+                <dock id="" activePageId="Pixel Analyzer.1">
+                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                    <page id="Pixel Analyzer.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Desktop/Giacomo/projetcs/REL/BOT/0010/comp/REL_BOT_0010_comp_v001_01.nk
+ frame 40
+ last_frame 99
+ lock_range true
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file "Z:/NUK-CO-0218-A1/_Training Footage/CG Integration/boat/boat_cg_complete_DISTORTED_v01/boat_cg_complete_DISTORTED_v01.####.exr"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 99
+ origlast 99
+ origset true
+ name Read2
+ xpos -150
+ ypos -294
+}
+set N686da700 [stack 0]
+LayerContactSheet {
+ showLayerNames true
+ name LayerContactSheet1
+ xpos -334
+ ypos -274
+}
+push $N686da700
+Dot {
+ name Dot5
+ xpos -402
+ ypos -260
+}
+Dot {
+ name Dot4
+ xpos -402
+ ypos 330
+}
+push $N686da700
+add_layer {refract refract.red refract.green refract.blue}
+Shuffle {
+ in refract
+ name Shuffle7
+ label "\[value in]"
+ xpos 530
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade7
+ xpos 530
+ ypos -98
+}
+Dot {
+ name Dot2
+ xpos 564
+ ypos -6
+}
+push $N686da700
+add_layer {refractionFilter refractionFilter.red refractionFilter.green refractionFilter.blue}
+Shuffle {
+ in refractionFilter
+ name Shuffle8
+ label "\[value in]"
+ xpos 636
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade8
+ xpos 636
+ ypos -98
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge2
+ xpos 636
+ ypos -10
+}
+push $N686da700
+add_layer {reflect reflect.red reflect.green reflect.blue}
+Shuffle {
+ in reflect
+ name Shuffle5
+ label "\[value in]"
+ xpos 238
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade5
+ xpos 238
+ ypos -98
+}
+Dot {
+ name Dot3
+ xpos 272
+ ypos -6
+}
+push $N686da700
+add_layer {reflectionFilter reflectionFilter.red reflectionFilter.green reflectionFilter.blue}
+Shuffle {
+ in reflectionFilter
+ name Shuffle6
+ label "\[value in]"
+ xpos 343
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade6
+ xpos 343
+ ypos -98
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge3
+ xpos 344
+ ypos -10
+}
+push $N686da700
+add_layer {GI GI.red GI.green GI.blue}
+Shuffle {
+ in GI
+ name Shuffle4
+ label "\[value in]"
+ xpos 45
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade4
+ xpos 45
+ ypos -96
+}
+push $N686da700
+push 0
+push $N686da700
+add_layer {specular specular.red specular.green specular.blue}
+Shuffle {
+ in specular
+ alpha red
+ name Shuffle1
+ label "\[value in]"
+ xpos -341
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade1
+ xpos -341
+ ypos -98
+}
+push $N686da700
+add_layer {SunLight SunLight.red SunLight.green SunLight.blue}
+Shuffle {
+ in SunLight
+ name Shuffle2
+ label "\[value in]"
+ xpos -196
+ ypos -184
+ postage_stamp true
+}
+Grade {
+ name Grade2
+ xpos -196
+ ypos -98
+}
+Merge2 {
+ inputs 6+1
+ operation plus
+ name Merge4
+ xpos 91
+ ypos 110
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy1
+ xpos 91
+ ypos 320
+}
+Dot {
+ name Dot1
+ xpos 125
+ ypos 378
+}
+push $N686da700
+Dot {
+ name Dot7
+ xpos -116
+ ypos -342
+}
+Dot {
+ name Dot6
+ xpos -484
+ ypos -342
+}
+add_layer {Shadow Shadow.alpha}
+Shuffle {
+ in Shadow
+ name Shuffle3
+ label "\[value in]"
+ xpos -518
+ ypos -184
+ postage_stamp true
+}
+Invert {
+ name Invert1
+ xpos -518
+ ypos -98
+}
+Grade {
+ blackpoint -0.026
+ name Grade3
+ xpos -518
+ ypos -60
+}
+set N4fd72a80 [stack 0]
+Dot {
+ name Dot8
+ xpos -482
+ ypos 234
+}
+Read {
+ inputs 0
+ file "Z:/NUK-CO-0218-A1/_Training Footage/CG Integration/boat/boat_scan_v01/boat_scan_v01.####.exr"
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 99
+ origlast 99
+ origset true
+ name Read1
+ xpos 590
+ ypos 128
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge5
+ xpos 590
+ ypos 230
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos 590
+ ypos 374
+}
+push $N686da700
+push $N4fd72a80
+Viewer {
+ inputs 3
+ frame 40
+ frame_range 1-99
+ input_number 2
+ name Viewer1
+ xpos 590
+ ypos 470
+}

@@ -1,0 +1,25 @@
+set cut_paste_input [stack 0]
+version 11.1 v2
+push $cut_paste_input
+LensDistortion2 {
+distortionModelDisplayX "xu = xd / (1 + k0 * rd^2 + k1 * rd^4)"
+distortionModelDisplayY "yu = yd / (1 + k0 * rd^2 + k1 * rd^4)"
+distortionDenominator0 -0.04600687325
+distortionDenominator1 0.01507202629
+keyFrame 66
+keyingInitialised true
+output Redistort
+resampleType Mitchell
+scalingType Reformat
+crop {0 0 1920 1080}
+featuresKnob "
+version 1
+entries 0
+entries 0
+"
+name LensDistortion1
+label "Zeiss 21mm"
+selected true
+xpos 14480
+ypos -7223
+}

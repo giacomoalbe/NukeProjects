@@ -1,0 +1,12 @@
+# Blacklist all folder/subfloder
+/*/*/scan
+/*/*/cg
+/*/*/3d
+/*/*/slap
+/*/*/data
+
+!.gitignore
+!README.md
+# Whitelist only roto and comp folder
+!roto/*
+!comp/*

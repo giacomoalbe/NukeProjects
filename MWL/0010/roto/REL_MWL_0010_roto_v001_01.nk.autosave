@@ -1,0 +1,1753 @@
+#! C:/Program Files/Nuke11.0v1/nuke-11.0.1.dll -nx
+version 11.0 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1041" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="838" stretch="1"/>
+            <splitter orientation="2">
+                <split size="625"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="368"/>
+                <splitter orientation="1">
+                    <split size="838"/>
+                    <dock id="" activePageId="Properties.1">
+                        <page id="Properties.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="1018"/>
+            <splitter orientation="2">
+                <split size="707"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+                <split size="286"/>
+                <dock id="" activePageId="Pixel Analyzer.1">
+                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                    <page id="Pixel Analyzer.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Desktop/Giacomo/projetcs/REL/MWL/0010/roto/REL_MWL_0010_roto_v001_01.nk
+ frame 171
+ first_frame 0
+ last_frame 175
+ lock_range true
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file "Z:/NUK-CO-0218-A1/_Training Footage/Man Walking/walkingMan_####.tga"
+ format "720 486 0 0 720 486 0.91 NTSC"
+ origset true
+ name Read1
+ xpos -93
+ ypos -136
+}
+Roto {
+ output alpha
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x43b40000 x43730000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {layer track
+     {f 2097664}
+     {t x43b40000 x43730000}
+     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+     {layer torso
+      {f 2097664}
+      {t
+       {{0 x43b7d725 -}
+        {1}
+        {x40000000}
+        {x40400000}
+        {x40800000}
+        {x40a00000}
+        {x40c00000}
+        {x40e00000}
+        {x41000000}
+        {x41100000}
+        {x41200000}
+        {x41300000}
+        {x41400000}
+        {x41500000}
+        {x41600000}
+        {x41700000}
+        {x41800000}
+        {x41880000}
+        {x41900000}
+        {x41980000}
+        {x41a00000}
+        {x41a80000}
+        {x41b00000}
+        {x41b80000}
+        {x41c00000}
+        {x41c80000}
+        {x41d00000}
+        {x41d80000}
+        {x41e00000}
+        {x41e80000}
+        {x41f00000}
+        {x41f80000}
+        {x42000000}
+        {x42040000}
+        {x42080000}
+        {x420c0000}
+        {x42100000}
+        {x42140000}
+        {x42180000}
+        {x421c0000}
+        {x42200000}
+        {x42240000}
+        {x42280000}
+        {x422c0000}
+        {x42300000}
+        {x42340000}
+        {x42380000}
+        {x423c0000}
+        {x42400000}
+        {x42440000}
+        {x42480000}
+        {x424c0000}
+        {x42500000}
+        {x42540000}
+        {x42580000}
+        {x425c0000}
+        {x42600000}
+        {x42640000}
+        {x42680000}
+        {x426c0000}
+        {x42700000}
+        {x42740000}
+        {x42780000}
+        {x427c0000}
+        {x42800000}
+        {x42820000}
+        {x42840000}
+        {x42860000}
+        {x42880000}
+        {x428a0000}
+        {x428c0000}
+        {x428e0000}
+        {x42900000}
+        {x42920000}
+        {x42940000}
+        {x42960000}
+        {x42980000}
+        {x429a0000}
+        {x429c0000}
+        {x429e0000}
+        {x42a00000}
+        {x42a20000}
+        {x42a40000}
+        {x42a60000}
+        {x42a80000}
+        {x42aa0000}
+        {x42ac0000}
+        {x42ae0000}
+        {x42b00000}
+        {x42b20000}
+        {x42b40000}
+        {x42b60000}
+        {x42b80000}
+        {x42ba0000}
+        {x42bc0000}
+        {x42be0000}
+        {x42c00000}
+        {x42c20000}
+        {x42c40000}
+        {x42c60000}
+        {x42c80000}
+        {x42ca0000}
+        {x42cc0000}
+        {x42ce0000}
+        {x42d00000}
+        {x42d20000}
+        {x42d40000}
+        {x42d60000}
+        {x42d80000}
+        {x42da0000}
+        {x42dc0000}
+        {x42de0000}
+        {x42e00000}
+        {x42e20000}
+        {x42e40000}
+        {x42e60000}
+        {x42e80000}
+        {x42ea0000}
+        {x42ec0000}
+        {x42ee0000}
+        {x42f00000}
+        {x42f20000}
+        {x42f40000}
+        {x42f60000}
+        {x42fc0000}
+        {x42fe0000}
+        {x43000000}
+        {x43010000}
+        {x43020000}
+        {x43030000}
+        {x43040000}
+        {x43050000}
+        {x430b0000}
+        {x430c0000}
+        {x430d0000}
+        {x430e0000}
+        {x430f0000}
+        {x43100000}
+        {x43110000}
+        {x43120000}
+        {x43130000}
+        {x43140000}
+        {x43150000}
+        {x43160000}
+        {x43170000}
+        {x43180000}
+        {x43190000}
+        {x431a0000}
+        {x431b0000}
+        {x431c0000}
+        {x431d0000}
+        {x431e0000}
+        {x431f0000}
+        {x43200000}
+        {x43210000}
+        {x43220000}
+        {x43230000}
+        {x43240000}
+        {x43250000}
+        {x43260000}
+        {x43270000}
+        {x43280000}
+        {x43290000}
+        {x432a0000}
+        {x432b0000}
+        {x432c0000}
+        {x432d0000}
+        {x432e0000}
+        {x432f0000}}
+       {{0 x4366243a -}
+        {1}
+        {x40000000}
+        {x40400000}
+        {x40800000}
+        {x40a00000}
+        {x40c00000}
+        {x40e00000}
+        {x41000000}
+        {x41100000}
+        {x41200000}
+        {x41300000}
+        {x41400000}
+        {x41500000}
+        {x41600000}
+        {x41700000}
+        {x41800000}
+        {x41880000}
+        {x41900000}
+        {x41980000}
+        {x41a00000}
+        {x41a80000}
+        {x41b00000}
+        {x41b80000}
+        {x41c00000}
+        {x41c80000}
+        {x41d00000}
+        {x41d80000}
+        {x41e00000}
+        {x41e80000}
+        {x41f00000}
+        {x41f80000}
+        {x42000000}
+        {x42040000}
+        {x42080000}
+        {x420c0000}
+        {x42100000}
+        {x42140000}
+        {x42180000}
+        {x421c0000}
+        {x42200000}
+        {x42240000}
+        {x42280000}
+        {x422c0000}
+        {x42300000}
+        {x42340000}
+        {x42380000}
+        {x423c0000}
+        {x42400000}
+        {x42440000}
+        {x42480000}
+        {x424c0000}
+        {x42500000}
+        {x42540000}
+        {x42580000}
+        {x425c0000}
+        {x42600000}
+        {x42640000}
+        {x42680000}
+        {x426c0000}
+        {x42700000}
+        {x42740000}
+        {x42780000}
+        {x427c0000}
+        {x42800000}
+        {x42820000}
+        {x42840000}
+        {x42860000}
+        {x42880000}
+        {x428a0000}
+        {x428c0000}
+        {x428e0000}
+        {x42900000}
+        {x42920000}
+        {x42940000}
+        {x42960000}
+        {x42980000}
+        {x429a0000}
+        {x429c0000}
+        {x429e0000}
+        {x42a00000}
+        {x42a20000}
+        {x42a40000}
+        {x42a60000}
+        {x42a80000}
+        {x42aa0000}
+        {x42ac0000}
+        {x42ae0000}
+        {x42b00000}
+        {x42b20000}
+        {x42b40000}
+        {x42b60000}
+        {x42b80000}
+        {x42ba0000}
+        {x42bc0000}
+        {x42be0000}
+        {x42c00000}
+        {x42c20000}
+        {x42c40000}
+        {x42c60000}
+        {x42c80000}
+        {x42ca0000}
+        {x42cc0000}
+        {x42ce0000}
+        {x42d00000}
+        {x42d20000}
+        {x42d40000}
+        {x42d60000}
+        {x42d80000}
+        {x42da0000}
+        {x42dc0000}
+        {x42de0000}
+        {x42e00000}
+        {x42e20000}
+        {x42e40000}
+        {x42e60000}
+        {x42e80000}
+        {x42ea0000}
+        {x42ec0000}
+        {x42ee0000}
+        {x42f00000}
+        {x42f20000}
+        {x42f40000}
+        {x42f60000}
+        {x42fc0000}
+        {x42fe0000}
+        {x43000000}
+        {x43010000}
+        {x43020000}
+        {x43030000}
+        {x43040000}
+        {x43050000}
+        {x430b0000}
+        {x430c0000}
+        {x430d0000}
+        {x430e0000}
+        {x430f0000}
+        {x43100000}
+        {x43110000}
+        {x43120000}
+        {x43130000}
+        {x43140000}
+        {x43150000}
+        {x43160000}
+        {x43170000}
+        {x43180000}
+        {x43190000}
+        {x431a0000}
+        {x431b0000}
+        {x431c0000}
+        {x431d0000}
+        {x431e0000}
+        {x431f0000}
+        {x43200000}
+        {x43210000}
+        {x43220000}
+        {x43230000}
+        {x43240000}
+        {x43250000}
+        {x43260000}
+        {x43270000}
+        {x43280000}
+        {x43290000}
+        {x432a0000}
+        {x432b0000}
+        {x432c0000}
+        {x432d0000}
+        {x432e0000}
+        {x432f0000}}      0
+       {{0 x3f1e8200 0 1 xbf141a00 1}
+        {1 0 xbf335200 1 xbf335200 1}
+        {x40000000 xbf482200 xbf47ee00 1 xbf47ee00 1}
+        {x40400000 xbfc7ee00 xbf449800 1 xbf449800 1}
+        {x40800000 xc0145480 xbf2ef200 1 xbf2ef200 1}
+        {x40a00000 xc03b7000 xbef2d400 1 xbef2d400 1}
+        {x40c00000 xc0510980 -}
+        {x40e00000 xc03f1a80 -}
+        {x41000000 xc04bc500 xbefa2800 1 xbefa2800 1}
+        {x41100000 xc07da480 xbf0cc900 1 xbf0cc900 1}
+        {x41200000 xc08914c0 xbeecb800 1 xbeecb800 1}
+        {x41300000 xc09c6940 -}
+        {x41400000 xc09b3b00 -}
+        {x41500000 xc0a1b8c0 -}
+        {x41600000 xc0927040 x3ee58600 1 x3ee58600 1}
+        {x41700000 xc0850800 x3d382000 1 x3d382000 1}
+        {x41800000 xc0848d40 -}
+        {x41880000 xc0896540 -}
+        {x41900000 xc07cc400 -}
+        {x41980000 xc0813200 xbe6e2400 1 xbe6e2400 1}
+        {x41a00000 xc08d4440 xbebb6a00 1 xbebb6a00 1}
+        {x41a80000 xc0989f40 xbee27200 1 xbee27200 1}
+        {x41b00000 xc0a99280 xbeb92600 1 xbeb92600 1}
+        {x41b80000 xc0afc400 xbe80b000 1 xbe80b000 1}
+        {x41c00000 xc0b9a880 xbf0d5600 1 xbf0d5600 1}
+        {x41c80000 xc0d31980 xbf8db580 1 xbf8db580 1}
+        {x41d00000 xc10041a0 xbfbfb780 1 xbfbfb780 1}
+        {x41d80000 xc1197aa0 xbfc77500 1 xbfc77500 1}
+        {x41e00000 xc1321ee0 xbfd56c00 1 xbfd56c00 1}
+        {x41e80000 xc14ed5a0 xbfdae980 1 xbfdae980 1}
+        {x41f00000 xc168d940 xbf923480 1 xbf923480 1}
+        {x41f80000 xc17362c0 xbf0f4900 1 xbf0f4900 1}
+        {x42000000 xc17ac260 xbec00a00 1 xbec00a00 1}
+        {x42040000 xc17f6360 xbeac2000 1 xbeac2000 1}
+        {x42080000 xc182c230 -}
+        {x420c0000 xc18202f0 -}
+        {x42100000 xc1823360 xbd915000 1 xbd915000 1}
+        {x42140000 xc1880f80 xbf063800 1 xbf063800 1}
+        {x42180000 xc18a96e0 xbe8ee600 1 xbe8ee600 1}
+        {x421c0000 xc18c86b0 xbea7c400 1 xbea7c400 1}
+        {x42200000 xc18fd500 xbea88200 1 xbea88200 1}
+        {x42240000 xc191cac0 xbda3b000 1 xbda3b000 1}
+        {x42280000 xc1920150 -}
+        {x422c0000 xc191f460 x3c9b4000 1 x3c9b4000 1}
+        {x42300000 xc18f26f0 -}
+        {x42340000 xc196b240 xbfac1e00 1 xbfac1e00 1}
+        {x42380000 xc1a4aab0 xbfcb0480 1 xbfcb0480 1}
+        {x423c0000 xc1b012d0 xbf9f9d80 1 xbf9f9d80 1}
+        {x42400000 xc1b89e60 xbfafa700 1 xbfafa700 1}
+        {x42440000 xc1c607b0 xbfb8fe80 1 xbfb8fe80 1}
+        {x42480000 xc1cfbe30 -}
+        {x424c0000 xc1cf5820 x3e191800 1 x3e191800 1}
+        {x42500000 xc1c7f030 -}
+        {x42540000 xc1ce7320 xbf84ba80 1 xbf84ba80 1}
+        {x42580000 xc1d88780 xbf91b700 1 xbf91b700 1}
+        {x425c0000 xc1e0aa00 xbf4e9700 1 xbf4e9700 1}
+        {x42600000 xc1e570f0 xbf27ed00 1 xbf27ed00 1}
+        {x42640000 xc1eb28d0 xbf5d5300 1 xbf5d5300 1}
+        {x42680000 xc1f34620 xbf34ca00 1 xbf34ca00 1}
+        {x426c0000 xc1f67570 xbec52800 1 xbec52800 1}
+        {x42700000 xc1f96f60 xbef6fc00 1 xbef6fc00 1}
+        {x42740000 xc1fe2d50 xbeebf400 1 xbeebf400 1}
+        {x42780000 xc2006780 xbeae3600 1 xbeae3600 1}
+        {x427c0000 xc201cf80 xbf03dd00 1 xbf03dd00 1}
+        {x42800000 xc2048668 xbf465a00 1 xbf465a00 1}
+        {x42820000 xc2080250 xbf7b9b00 1 xbf7b9b00 1}
+        {x42840000 xc20c6340 xbfa1c280 1 xbfa1c280 1}
+        {x42860000 xc2121e78 xbfe9e400 1 xbfe9e400 1}
+        {x42880000 xc21b0180 xc0026480 1 xc0026480 1}
+        {x428a0000 xc2226b08 xbfce2100 1 xbfce2100 1}
+        {x428c0000 xc227e390 xbfc53980 1 xbfc53980 1}
+        {x428e0000 xc22ebea0 xbfd3cb00 1 xbfd3cb00 1}
+        {x42900000 xc2352040 xbfe57480 1 xbfe57480 1}
+        {x42920000 xc23d15e8 xbfebcf00 1 xbfebcf00 1}
+        {x42940000 xc243dd30 xbfb25900 1 xbfb25900 1}
+        {x42960000 xc2483b78 xbf65f400 1 xbf65f400 1}
+        {x42980000 xc24b0cd0 xbf3b1400 1 xbf3b1400 1}
+        {x429a0000 xc24e1418 xbf193100 1 xbf193100 1}
+        {x429c0000 xc24fd658 xbecbc200 1 xbecbc200 1}
+        {x429e0000 xc2514320 xbe9c9a00 1 xbe9c9a00 1}
+        {x42a00000 xc25248c0 xbe90ec00 1 xbe90ec00 1}
+        {x42a20000 xc25386d0 xbe7bcc00 1 xbe7bcc00 1}
+        {x42a40000 xc2544058 xbe95e400 1 xbe95e400 1}
+        {x42a60000 xc255de60 xbef27000 1 xbef27000 1}
+        {x42a80000 xc2580a18 xbf90a880 1 xbf90a880 1}
+        {x42aa0000 xc25ee8e8 xbfb78000 1 xbfb78000 1}
+        {x42ac0000 xc2638218 xbfacc200 1 xbfacc200 1}
+        {x42ae0000 xc269b508 xbfd57200 1 xbfd57200 1}
+        {x42b00000 xc270d938 xc01e2ec0 1 xc01e2ec0 1}
+        {x42b20000 xc27d7ae0 xc02e2ac0 1 xc02e2ac0 1}
+        {x42b40000 xc2834f48 xc011e540 1 xc011e540 1}
+        {x42b60000 xc287dbc4 xbfd47b00 1 xbfd47b00 1}
+        {x42b80000 xc289f320 xbf888480 1 xbf888480 1}
+        {x42ba0000 xc28c1fe8 xbfeb9200 1 xbfeb9200 1}
+        {x42bc0000 xc2914fb0 xc02c6840 1 xc02c6840 1}
+        {x42be0000 xc296e66c xc008d840 1 xc008d840 1}
+        {x42c00000 xc299dd34 -}
+        {x42c20000 xc2990158 x3fa4e500 1 x3fa4e500 1}
+        {x42c40000 xc293e6e4 -}
+        {x42c60000 xc2979acc xbfc33180 1 xbfc33180 1}
+        {x42c80000 xc29a0070 xbfb45e00 1 xbfb45e00 1}
+        {x42ca0000 xc29d3dbc xbfcc7180 1 xbfcc7180 1}
+        {x42cc0000 xc2a063fc xbfe9a700 1 xbfe9a700 1}
+        {x42ce0000 xc2a48af4 xbfd2f800 1 xbfd2f800 1}
+        {x42d00000 xc2a6fbbc xbf87e900 1 xbf87e900 1}
+        {x42d20000 xc2a8ca3c xbf6a8900 1 xbf6a8900 1}
+        {x42d40000 xc2aaa5e0 xbf8f1d00 1 xbf8f1d00 1}
+        {x42d60000 xc2ad4324 xbf994780 1 xbf994780 1}
+        {x42d80000 xc2af701c xbfb3d080 1 xbfb3d080 1}
+        {x42da0000 xc2b2e1a8 xbfc6e900 1 xbfc6e900 1}
+        {x42dc0000 xc2b5a764 xbfbdad00 1 xbfbdad00 1}
+        {x42de0000 xc2b8cf10 xbfc5ec00 1 xbfc5ec00 1}
+        {x42e00000 xc2bbd6c4 xbfcdee00 1 xbfcdee00 1}
+        {x42e20000 xc2bf3e80 xbff27500 1 xbff27500 1}
+        {x42e40000 xc2c36a6c xc00f9700 1 xc00f9700 1}
+        {x42e60000 xc2c837f0 xc0106f00 1 xc0106f00 1}
+        {x42e80000 xc2cc715c xc008cfc0 1 xc008cfc0 1}
+        {x42ea0000 xc2d0c4ec xbffdce80 1 xbffdce80 1}
+        {x42ec0000 xc2d45fd0 xc002a080 1 xc002a080 1}
+        {x42ee0000 xc2d8eef4 xbfd52d80 1 xbfd52d80 1}
+        {x42f00000 xc2db093c xbf31b900 1 xbf31b900 1}
+        {x42f20000 xc2dbb5d8 -}
+        {x42f40000 xc2d9b3b4 -}
+        {x42f60000 xc2db310c xbf3f5880 1 xbf3f5880 1}
+        {x42fc0000 xc2dfae78 xbf82cae0 1 xbf82cae0 1}
+        {x42fe0000 xc2e35dba xbfa5b040 1 xbfa5b040 1}
+        {x43000000 xc2e4dbfa xbfd6dd80 1 xbfd6dd80 1}
+        {x43010000 xc2ea14a6 xbff4d640 1 xbff4d640 1}
+        {x43020000 xc2ec82ac xbfb32d00 1 xbfb32d00 1}
+        {x43030000 xc2efae0e xbfd03a40 1 xbfd03a40 1}
+        {x43040000 xc2f3047e xc0289520 1 xc0289520 1}
+        {x43050000 xc2fa3760 xc01ed512 1 xc01ed512 1}
+        {x430b0000 xc30ae18d xc006c292 1 xc006c292 1}
+        {x430c0000 xc30bd8f8 xbff3e440 1 xbff3e440 1}
+        {x430d0000 xc30eb11e xbff1f980 1 xbff1f980 1}
+        {x430e0000 xc30fa0de xbf8efb80 1 xbf8efb80 1}
+        {x430f0000 xc310ed0c xbf8f3000 1 xbf8f3000 1}
+        {x43100000 xc311dd9e xbf511580 1 xbf511580 1}
+        {x43110000 xc3128f37 xbf25c200 1 xbf25c200 1}
+        {x43120000 xc3132922 xbf656500 1 xbf656500 1}
+        {x43130000 xc3145a01 xbfaa9b80 1 xbfaa9b80 1}
+        {x43140000 xc315d390 xbffe8100 1 xbffe8100 1}
+        {x43150000 xc3185405 xc02ddd20 1 xc02ddd20 1}
+        {x43160000 xc31b4279 xbfec71c0 1 xbfec71c0 1}
+        {x43170000 xc31c05cc xbf531e00 1 xbf531e00 1}
+        {x43180000 xc31ce8b5 xbfeb2dc0 1 xbfeb2dc0 1}
+        {x43190000 xc31fb283 xc029b800 1 xc029b800 1}
+        {x431a0000 xc3223675 xc019b740 1 xc019b740 1}
+        {x431b0000 xc324803d xc0231220 1 xc0231220 1}
+        {x431c0000 xc3274f06 xc025f360 1 xc025f360 1}
+        {x431d0000 xc329afd8 xc01afa00 1 xc01afa00 1}
+        {x431e0000 xc32c26d6 xc032c8e0 1 xc032c8e0 1}
+        {x431f0000 xc32f461f xc04a1260 1 xc04a1260 1}
+        {x43200000 xc3327769 xc03cf860 1 xc03cf860 1}
+        {x43210000 xc3352de2 xc0328040 1 xc0328040 1}
+        {x43220000 xc3380b6b xc0372340 1 xc0372340 1}
+        {x43230000 xc33ae6fc xc0208ce0 1 xc0208ce0 1}
+        {x43240000 xc33d0fd2 xbff99340 1 xbff99340 1}
+        {x43250000 xc33ecd49 xbfdc4140 1 xbfdc4140 1}
+        {x43260000 xc34080d7 xbfd177c0 1 xbfd177c0 1}
+        {x43270000 xc3421328 xbfbf9d80 1 xbfbf9d80 1}
+        {x43280000 xc3437f4d xbfb52d00 1 xbfb52d00 1}
+        {x43290000 xc344e7dc xbfc17980 1 xbfc17980 1}
+        {x432a0000 xc3468533 xbfd49080 1 xbfd49080 1}
+        {x432b0000 xc3483a1e xbfeff880 1 xbfeff880 1}
+        {x432c0000 xc34a4515 xbff89c80 1 xbff89c80 1}
+        {x432d0000 xc34c1c90 xc005f660 1 xc005f660 1}
+        {x432e0000 xc34e74c8 xc015fa60 1 xc015fa60 1}
+        {x432f0000 xc350cc63 xc015dcf0 1 0 1}}
+       {{0 x3fede300 0 1 xbfede480 1}
+        {1 0 xbfede000 1 xbfede000 1}
+        {x40000000 xbfeddd00 xbfe65b00 1 xbfe65b00 1}
+        {x40400000 xc0665b00 xbfcaf380 1 xbfcaf380 1}
+        {x40800000 xc0a0f100 xbf8fcec0 1 xbf8fcec0 1}
+        {x40a00000 xc0bb14e0 xbf1df980 1 xbf1df980 1}
+        {x40c00000 xc0c86f60 -}
+        {x40e00000 xc0c55480 x3dead000 1 x3dead000 1}
+        {x41000000 xc0c118e0 x3e5d4400 1 x3e5d4400 1}
+        {x41100000 xc0b78040 x3ed1f600 1 x3ed1f600 1}
+        {x41200000 xc0a6da20 x3f134f00 1 x3f134f00 1}
+        {x41300000 xc092ac80 x3f49b200 1 x3f49b200 1}
+        {x41400000 xc068db40 x3f9156c0 1 x3f9156c0 1}
+        {x41500000 xc0140240 x3fcde280 1 x3fcde280 1}
+        {x41600000 xbed7c600 x3ff05100 1 x3ff05100 1}
+        {x41700000 x3fb89d80 x3fdbdf00 1 x3fdbdf00 1}
+        {x41800000 x4040e640 x3f9e4540 1 x3f9e4540 1}
+        {x41880000 x407a9400 x3f3e8500 1 x3f3e8500 1}
+        {x41900000 x40901460 x3ec0a100 1 x3ec0a100 1}
+        {x41980000 x40955e20 -}
+        {x41a00000 x408833a0 xbf243d80 1 xbf243d80 1}
+        {x41a80000 x40589d80 xbf84cb40 1 xbf84cb40 1}
+        {x41b00000 x400b9c00 xbf84b6c0 1 xbf84b6c0 1}
+        {x41b80000 x3fa7cd80 xbf621100 1 xbf621100 1}
+        {x41c00000 x3ed49c00 xbf828480 1 xbf828480 1}
+        {x41c80000 xbf3a7700 xbf858240 1 xbf858240 1}
+        {x41d00000 xbfd5dd80 xbf76bc00 1 xbf76bc00 1}
+        {x41d80000 xc029fbc0 xbf6e9d00 1 xbf6e9d00 1}
+        {x41e00000 xc0623d40 xbf6bd000 1 xbf6bd000 1}
+        {x41e80000 xc08ff1e0 xbf4ff180 1 xbf4ff180 1}
+        {x41f00000 xc0a51b00 xbf040680 1 xbf040680 1}
+        {x41f80000 xc0b0f380 xbe87ee00 1 xbe87ee00 1}
+        {x42000000 xc0b618c0 -}
+        {x42040000 xc0a4bfe0 x3f6bdc00 1 x3f6bdc00 1}
+        {x42080000 xc0764380 x3fba5540 1 x3fba5540 1}
+        {x420c0000 xc00f2a80 x3fc51ec0 1 x3fc51ec0 1}
+        {x42100000 xbf449300 x3fbc3600 1 x3fbc3600 1}
+        {x42140000 x3f342e00 x3fbaf000 1 x3fbaf000 1}
+        {x42180000 x4009cb40 x3fa2e440 1 x3fa2e440 1}
+        {x421c0000 x404fefc0 x3f5e0a80 1 x3f5e0a80 1}
+        {x42200000 x4078d080 x3dae1800 1 x3dae1800 1}
+        {x42240000 x407aa0c0 -}
+        {x42280000 x405acd00 xbf554600 1 xbf554600 1}
+        {x422c0000 x400ffdc0 xbfb1ca00 1 xbfb1ca00 1}
+        {x42300000 x3f240c00 xbfef7e40 1 xbfef7e40 1}
+        {x42340000 xbfbf0100 xc006ae60 1 xc006ae60 1}
+        {x42380000 xc06459c0 xbfd0e840 1 xbfd0e840 1}
+        {x423c0000 xc0983460 xbf86d380 1 xbf86d380 1}
+        {x42400000 xc0b596a0 xbf504180 1 xbf504180 1}
+        {x42440000 xc0cc44c0 xbedfde00 1 xbedfde00 1}
+        {x42480000 xc0d19260 -}
+        {x424c0000 xc0cb8160 x3e113c00 1 x3e113c00 1}
+        {x42500000 xc0c87ea0 x3da56400 1 x3da56400 1}
+        {x42540000 xc0c65640 x3e4f2400 1 x3e4f2400 1}
+        {x42580000 xc0b7e7c0 x3f34f700 1 x3f34f700 1}
+        {x425c0000 xc0991880 x3f950600 1 x3f950600 1}
+        {x42600000 xc05ac980 x3fbc2a40 1 x3fbc2a40 1}
+        {x42640000 xbfec0d80 x3fdc7600 1 x3fdc7600 1}
+        {x42680000 x3cd64000 x3fcf7700 1 x3fcf7700 1}
+        {x426c0000 x3fb2e080 x3f95d100 1 x3f95d100 1}
+        {x42700000 x40177d80 x3f53c580 1 x3f53c580 1}
+        {x42740000 x40435300 x3f06eb80 1 x3f06eb80 1}
+        {x42780000 x405af340 -}
+        {x427c0000 x405402c0 xbea68c00 1 xbea68c00 1}
+        {x42800000 x4028d700 xbf57bb80 1 xbf57bb80 1}
+        {x42820000 x3fd04a00 xbf880f40 1 xbf880f40 1}
+        {x42840000 x3f031f00 xbf8efac0 1 xbf8efac0 1}
+        {x42860000 xbf1b5700 xbf9315c0 1 xbf9315c0 1}
+        {x42880000 xbfe49c00 xbf96c600 1 xbf96c600 1}
+        {x428a0000 xc03d9bc0 xbf91d240 1 xbf91d240 1}
+        {x428c0000 xc0821020 xbf8bf940 1 xbf8bf940 1}
+        {x428e0000 xc0a4ca80 xbf71c480 1 xbf71c480 1}
+        {x42900000 xc0be8140 xbf604f80 1 xbf604f80 1}
+        {x42920000 xc0dcde60 xbf394580 1 xbf394580 1}
+        {x42940000 xc0ecd2a0 xbe95fa00 1 xbe95fa00 1}
+        {x42960000 xc0eff280 -}
+        {x42980000 xc0e8bc80 x3f182600 1 x3f182600 1}
+        {x429a0000 xc0c9e900 x3f8ec8c0 1 x3f8ec8c0 1}
+        {x429c0000 xc0a15820 x3fb24980 1 x3fb24980 1}
+        {x429e0000 xc0618880 x3fb50780 1 x3fb50780 1}
+        {x42a00000 xc00da8c0 x3faf2940 1 x3faf2940 1}
+        {x42a20000 xbf497d00 x3fad9580 1 x3fad9580 1}
+        {x42a40000 x3eff6600 x3f8db640 1 x3f8db640 1}
+        {x42a60000 x3fb6ae00 x3f1df900 1 x3f1df900 1}
+        {x42a80000 x3fddd280 -}
+        {x42aa0000 x3fae9400 xbf022b00 1 xbf022b00 1}
+        {x42ac0000 x3f374f00 xbf69bd00 1 xbf69bd00 1}
+        {x42ae0000 xbeeca400 xbfad2a00 1 xbfad2a00 1}
+        {x42b00000 xbffeac80 xbfd1fcc0 1 xbfd1fcc0 1}
+        {x42b20000 xc06f9140 xbfd53ac0 1 xbfd53ac0 1}
+        {x42b40000 xc0aa4880 xbf9ff300 1 xbf9ff300 1}
+        {x42b60000 xc0c7c220 xbf3aca80 1 xbf3aca80 1}
+        {x42b80000 xc0d8fb20 xbf01e200 1 xbf01e200 1}
+        {x42ba0000 xc0e83aa0 -}
+        {x42bc0000 xc0e805c0 x3c3e0000 1 x3c3e0000 1}
+        {x42be0000 xc0e77ca0 -}
+        {x42c00000 xc0e946a0 xbde0d400 1 xbde0d400 1}
+        {x42c20000 xc0ee8340 -}
+        {x42c40000 xc0ddd340 x3f20bd00 1 x3f20bd00 1}
+        {x42c60000 xc0c65400 x3f5a8780 1 x3f5a8780 1}
+        {x42c80000 xc0a73160 x3f7a9c00 1 x3f7a9c00 1}
+        {x42ca0000 xc087ad00 x3f7a7280 1 x3f7a7280 1}
+        {x42cc0000 xc0512980 x3f79f500 1 x3f79f500 1}
+        {x42ce0000 xc0125f80 x3f716a80 1 x3f716a80 1}
+        {x42d00000 xbfb0e880 x3f1d8b00 1 x3f1d8b00 1}
+        {x42d20000 xbf873400 -}
+        {x42d40000 xbf87cb00 xbc628000 1 xbc628000 1}
+        {x42d60000 xbfd11680 xbf4a5d00 1 xbf4a5d00 1}
+        {x42d80000 xc0291400 xbf8e9d80 1 xbf8e9d80 1}
+        {x42da0000 xc07728c0 xbf9e14c0 1 xbf9e14c0 1}
+        {x42dc0000 xc0a39460 xbf9e8540 1 xbf9e8540 1}
+        {x42de0000 xc0cad700 xbf8e9040 1 xbf8e9040 1}
+        {x42e00000 xc0eadc80 xbf89f780 1 xbf89f780 1}
+        {x42e20000 xc107e960 xbf867200 1 xbf867200 1}
+        {x42e40000 xc1170ac0 xbf54f300 1 xbf54f300 1}
+        {x42e60000 xc12287c0 xbf226200 1 xbf226200 1}
+        {x42e80000 xc12b5700 xbefcf800 1 xbefcf800 1}
+        {x42ea0000 xc1325740 xbebb9200 1 xbebb9200 1}
+        {x42ec0000 xc1371020 xbeb14600 1 xbeb14600 1}
+        {x42ee0000 xc13d6ba0 -}
+        {x42f00000 xc12ec290 -}
+        {x42f20000 xc133e160 -}
+        {x42f40000 xc119b850 x3eda8200 1 x3eda8200 1}
+        {x42f60000 xc11771a0 x3eda8200 1 x3eda8200 1}
+        {x42fc0000 xc0016e40 x400c9b20 1 x400c9b20 1}
+        {x42fe0000 xbf2d6800 x3e89b800 1 x3e89b800 1}
+        {x43000000 xbf167400 x3e81b200 1 x3e81b200 1}
+        {x43010000 xbe2ed800 x3ee1c100 1 x3ee1c100 1}
+        {x43020000 x3e969a00 -}
+        {x43030000 xbfa91b80 xc0016b60 1 xc0016b60 1}
+        {x43040000 xc0700380 xc015e000 1 xc015e000 1}
+        {x43050000 xc0c026e0 xbf5f7c6e 1 xbf5f7c6e 1}
+        {x430b0000 xc11dc750 -}
+        {x430c0000 xc1074fd0 x3eccfc00 1 x3eccfc00 1}
+        {x430d0000 xc1052d30 x3e30cc00 1 x3e30cc00 1}
+        {x430e0000 xc101c970 x3f22b400 1 x3f22b400 1}
+        {x430f0000 xc0d6d2c0 x3fb04480 1 x3fb04480 1}
+        {x43100000 xc0ab70a0 x3fbb3140 1 x3fbb3140 1}
+        {x43110000 xc0727440 x3fcac1c0 1 x3fcac1c0 1}
+        {x43120000 xc00c1f80 x3fc21c80 1 x3fc21c80 1}
+        {x43130000 xbf415f00 x3f7e2f80 1 x3f7e2f80 1}
+        {x43140000 xbe507c00 x3ee66900 1 x3ee66900 1}
+        {x43150000 x3e142800 -}
+        {x43160000 xbd9d9800 xbed0c900 1 xbed0c900 1}
+        {x43170000 xbf2bbf00 xbf48d980 1 xbf48d980 1}
+        {x43180000 xbfd2b300 xbf928080 1 xbf928080 1}
+        {x43190000 xc03d7040 xbfb62ac0 1 xbfb62ac0 1}
+        {x431a0000 xc08fc220 xbfc69a80 1 xbfc69a80 1}
+        {x431b0000 xc0c20560 xbfc5cf80 1 xbfc5cf80 1}
+        {x431c0000 xc0f2a9e0 xbf9e3100 1 xbf9e3100 1}
+        {x431d0000 xc1088ef0 xbf4aee00 1 xbf4aee00 1}
+        {x431e0000 xc112b2b0 xbf086180 1 xbf086180 1}
+        {x431f0000 xc1199b20 xbec74200 1 xbec74200 1}
+        {x43200000 xc11f26d0 xbeba6c00 1 xbeba6c00 1}
+        {x43210000 xc12541e0 xbed33400 1 xbed33400 1}
+        {x43220000 xc12c5a10 xbef27a00 1 xbef27a00 1}
+        {x43230000 xc1346980 xbeb12b00 1 xbeb12b00 1}
+        {x43240000 xc1376cc0 -}
+        {x43250000 xc12cbfa0 x3f608300 1 x3f608300 1}
+        {x43260000 xc11b5c60 x3faf5400 1 x3faf5400 1}
+        {x43270000 xc100eaa0 x3fd42f40 1 x3fd42f40 1}
+        {x43280000 xc0cca120 x3fcdb440 1 x3fcdb440 1}
+        {x43290000 xc09afb20 x3fc46c00 1 x3fc46c00 1}
+        {x432a0000 xc054d640 x3faa7bc0 1 x3faa7bc0 1}
+        {x432b0000 xc00b7a80 x3f58b880 1 x3f58b880 1}
+        {x432c0000 xbfd0f400 x3e98a600 1 x3e98a600 1}
+        {x432d0000 xbfc43b80 -}
+        {x432e0000 xbfec4300 xbf06b200 1 xbf06b200 1}
+        {x432f0000 xc02576c0 xbf58a680 1 0 1}}      0 0 0
+       {{x41800000 0}}
+       {{x41800000 1}}
+       {{x41800000 1}}}
+      {a vis 0 pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+      {curvegroup Bezier1 512 bezier
+       {{cc
+	 {f 8192}
+	 {px 0
+	  {x3eccd000 0}
+	  {x43ae29fe x435f6c49}
+	  {xbeccd000 0}
+	  {xc1143880 x40857b20}
+	  {x43c02e92 x4364875a}
+	  {x3eacf800 x41112400}
+	  {xbfe56b00 xc0b9d1e0}
+	  {x43c09e8a x4380846a}
+	  {x405f3a80 x4134ccc0}
+	  {x3f467600 xc0c2c5c0}
+	  {x43c1e1ba x438abfda}
+	  {xbf3d09c2 x40e0d78a}
+	  {x3fec87da xc00f136e}
+	  {x43bc5489 x43989e95}
+	  {xbfec87d8 x400f136e}
+	  {x40325f4d x3f4d8d5d}
+	  {x43b5771a x439af2b2}
+	  {xc0325f4d xbf4d8d64}
+	  {x3f999900 x40000000}
+	  {x43ace7be x43948b75}
+	  {xbf999900 xc0000000}
+	  {x3e4cd000 x40599980}
+	  {x43ac3f6c x438cd3dd}
+	  {xbe4cd000 xc0599980}
+	  {0 x3f199900}
+	  {x43ac8eb0 x437cc1d4}
+	  {0 xbf199900}}}
+        {cc
+	 {f 8192}
+	 {px 0
+	  {x3eccd000 0}
+	  {0 0}
+	  {xbeccd000 0}
+	  {xc1143880 x40857b20}
+	  {0 0}
+	  {x3eacf800 x41112400}
+	  {xbfe56b00 xc0b9d1e0}
+	  {0 0}
+	  {x405f3a80 x4134ccc0}
+	  {x3f467600 xc0c2c5c0}
+	  {0 0}
+	  {xbf3d0a00 x40e0d780}
+	  {x3fec87da xc00f136e}
+	  {0 0}
+	  {xbfec87d8 x400f136e}
+	  {x40325f4d x3f4d8d5d}
+	  {0 0}
+	  {xc0325f4d xbf4d8d64}
+	  {x3f999900 x40000000}
+	  {0 0}
+	  {xbf999900 xc0000000}
+	  {x3e4cd000 x40599980}
+	  {0 0}
+	  {xbe4cd000 xc0599980}
+	  {0 x3f199900}
+	  {0 0}
+	  {0 xbf199900}}}}
+       {tx 0 x43b4e2d5 x4388b83a}
+       {a osw x41200000 osf 0 str 1 spx x43b40000 spy x43730000 sb 1 ltn 0 ltm 0 tt x40800000}}}
+     {layer Legs
+      {f 2097664}
+      {t x43b40000 x43730000 0 x40c00000 x41f00000}
+      {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+      {layer Leg_L
+       {f 2097664}
+       {t
+        {{0 x43b7d725 -}
+	 {1}
+	 {x40000000}
+	 {x40400000}
+	 {x40800000}
+	 {x40a00000}
+	 {x40c00000}
+	 {x40e00000}
+	 {x41000000}
+	 {x41100000}
+	 {x41200000}
+	 {x41300000}
+	 {x41400000}
+	 {x41500000}
+	 {x41600000}
+	 {x41700000}
+	 {x41800000}
+	 {x41880000}
+	 {x41900000}
+	 {x41980000}
+	 {x41a00000}
+	 {x41a80000}
+	 {x41b00000}
+	 {x41b80000}
+	 {x41c00000}
+	 {x41c80000}
+	 {x41d00000}
+	 {x41d80000}
+	 {x41e00000}
+	 {x41e80000}
+	 {x41f00000}
+	 {x41f80000}
+	 {x42000000}
+	 {x42040000}
+	 {x42080000}
+	 {x420c0000}
+	 {x42100000}
+	 {x42140000}
+	 {x42180000}
+	 {x421c0000}
+	 {x42200000}
+	 {x42240000}
+	 {x42280000}
+	 {x422c0000}
+	 {x42300000}
+	 {x42340000}
+	 {x42380000}
+	 {x423c0000}
+	 {x42400000}
+	 {x42440000}
+	 {x42480000}
+	 {x424c0000}
+	 {x42500000}
+	 {x42540000}
+	 {x42580000}
+	 {x425c0000}
+	 {x42600000}
+	 {x42640000}
+	 {x42680000}
+	 {x426c0000}
+	 {x42700000}
+	 {x42740000}
+	 {x42780000}
+	 {x427c0000}
+	 {x42800000}
+	 {x42820000}
+	 {x42840000}
+	 {x42860000}
+	 {x42880000}
+	 {x428a0000}
+	 {x428c0000}
+	 {x428e0000}
+	 {x42900000}
+	 {x42920000}
+	 {x42940000}
+	 {x42960000}
+	 {x42980000}
+	 {x429a0000}
+	 {x429c0000}
+	 {x429e0000}
+	 {x42a00000}
+	 {x42a20000}
+	 {x42a40000}
+	 {x42a60000}
+	 {x42a80000}
+	 {x42aa0000}
+	 {x42ac0000}
+	 {x42ae0000}
+	 {x42b00000}
+	 {x42b20000}
+	 {x42b40000}
+	 {x42b60000}
+	 {x42b80000}
+	 {x42ba0000}
+	 {x42bc0000}
+	 {x42be0000}
+	 {x42c00000}
+	 {x42c20000}
+	 {x42c40000}
+	 {x42c60000}
+	 {x42c80000}
+	 {x42ca0000}
+	 {x42cc0000}
+	 {x42ce0000}
+	 {x42d00000}
+	 {x42d20000}
+	 {x42d40000}
+	 {x42d60000}
+	 {x42d80000}
+	 {x42da0000}
+	 {x42dc0000}
+	 {x42de0000}
+	 {x42e00000}
+	 {x42e20000}
+	 {x42e40000}
+	 {x42e60000}
+	 {x42e80000}
+	 {x42ea0000}
+	 {x42ec0000}
+	 {x42ee0000}
+	 {x42f00000}
+	 {x42f20000}
+	 {x42f40000}
+	 {x42f60000}
+	 {x42fc0000}
+	 {x42fe0000}
+	 {x43000000}
+	 {x43010000}
+	 {x43020000}
+	 {x43030000}
+	 {x43040000}
+	 {x43050000}
+	 {x430b0000}
+	 {x430c0000}
+	 {x430d0000}
+	 {x430e0000}
+	 {x430f0000}
+	 {x43100000}
+	 {x43110000}
+	 {x43120000}
+	 {x43130000}
+	 {x43140000}
+	 {x43150000}
+	 {x43160000}
+	 {x43170000}
+	 {x43180000}
+	 {x43190000}
+	 {x431a0000}
+	 {x431b0000}
+	 {x431c0000}
+	 {x431d0000}
+	 {x431e0000}
+	 {x431f0000}
+	 {x43200000}
+	 {x43210000}
+	 {x43220000}
+	 {x43230000}
+	 {x43240000}
+	 {x43250000}
+	 {x43260000}
+	 {x43270000}
+	 {x43280000}
+	 {x43290000}
+	 {x432a0000}
+	 {x432b0000}
+	 {x432c0000}
+	 {x432d0000}
+	 {x432e0000}
+	 {x432f0000}}
+        {{0 x4366243a -}
+	 {1}
+	 {x40000000}
+	 {x40400000}
+	 {x40800000}
+	 {x40a00000}
+	 {x40c00000}
+	 {x40e00000}
+	 {x41000000}
+	 {x41100000}
+	 {x41200000}
+	 {x41300000}
+	 {x41400000}
+	 {x41500000}
+	 {x41600000}
+	 {x41700000}
+	 {x41800000}
+	 {x41880000}
+	 {x41900000}
+	 {x41980000}
+	 {x41a00000}
+	 {x41a80000}
+	 {x41b00000}
+	 {x41b80000}
+	 {x41c00000}
+	 {x41c80000}
+	 {x41d00000}
+	 {x41d80000}
+	 {x41e00000}
+	 {x41e80000}
+	 {x41f00000}
+	 {x41f80000}
+	 {x42000000}
+	 {x42040000}
+	 {x42080000}
+	 {x420c0000}
+	 {x42100000}
+	 {x42140000}
+	 {x42180000}
+	 {x421c0000}
+	 {x42200000}
+	 {x42240000}
+	 {x42280000}
+	 {x422c0000}
+	 {x42300000}
+	 {x42340000}
+	 {x42380000}
+	 {x423c0000}
+	 {x42400000}
+	 {x42440000}
+	 {x42480000}
+	 {x424c0000}
+	 {x42500000}
+	 {x42540000}
+	 {x42580000}
+	 {x425c0000}
+	 {x42600000}
+	 {x42640000}
+	 {x42680000}
+	 {x426c0000}
+	 {x42700000}
+	 {x42740000}
+	 {x42780000}
+	 {x427c0000}
+	 {x42800000}
+	 {x42820000}
+	 {x42840000}
+	 {x42860000}
+	 {x42880000}
+	 {x428a0000}
+	 {x428c0000}
+	 {x428e0000}
+	 {x42900000}
+	 {x42920000}
+	 {x42940000}
+	 {x42960000}
+	 {x42980000}
+	 {x429a0000}
+	 {x429c0000}
+	 {x429e0000}
+	 {x42a00000}
+	 {x42a20000}
+	 {x42a40000}
+	 {x42a60000}
+	 {x42a80000}
+	 {x42aa0000}
+	 {x42ac0000}
+	 {x42ae0000}
+	 {x42b00000}
+	 {x42b20000}
+	 {x42b40000}
+	 {x42b60000}
+	 {x42b80000}
+	 {x42ba0000}
+	 {x42bc0000}
+	 {x42be0000}
+	 {x42c00000}
+	 {x42c20000}
+	 {x42c40000}
+	 {x42c60000}
+	 {x42c80000}
+	 {x42ca0000}
+	 {x42cc0000}
+	 {x42ce0000}
+	 {x42d00000}
+	 {x42d20000}
+	 {x42d40000}
+	 {x42d60000}
+	 {x42d80000}
+	 {x42da0000}
+	 {x42dc0000}
+	 {x42de0000}
+	 {x42e00000}
+	 {x42e20000}
+	 {x42e40000}
+	 {x42e60000}
+	 {x42e80000}
+	 {x42ea0000}
+	 {x42ec0000}
+	 {x42ee0000}
+	 {x42f00000}
+	 {x42f20000}
+	 {x42f40000}
+	 {x42f60000}
+	 {x42fc0000}
+	 {x42fe0000}
+	 {x43000000}
+	 {x43010000}
+	 {x43020000}
+	 {x43030000}
+	 {x43040000}
+	 {x43050000}
+	 {x430b0000}
+	 {x430c0000}
+	 {x430d0000}
+	 {x430e0000}
+	 {x430f0000}
+	 {x43100000}
+	 {x43110000}
+	 {x43120000}
+	 {x43130000}
+	 {x43140000}
+	 {x43150000}
+	 {x43160000}
+	 {x43170000}
+	 {x43180000}
+	 {x43190000}
+	 {x431a0000}
+	 {x431b0000}
+	 {x431c0000}
+	 {x431d0000}
+	 {x431e0000}
+	 {x431f0000}
+	 {x43200000}
+	 {x43210000}
+	 {x43220000}
+	 {x43230000}
+	 {x43240000}
+	 {x43250000}
+	 {x43260000}
+	 {x43270000}
+	 {x43280000}
+	 {x43290000}
+	 {x432a0000}
+	 {x432b0000}
+	 {x432c0000}
+	 {x432d0000}
+	 {x432e0000}
+	 {x432f0000}}       0
+        {{0 x3f1e8200 0 1 xbf141a00 1}
+	 {1 0 xbf335200 1 xbf335200 1}
+	 {x40000000 xbf482200 xbf47ee00 1 xbf47ee00 1}
+	 {x40400000 xbfc7ee00 xbf449800 1 xbf449800 1}
+	 {x40800000 xc0145480 xbf2ef200 1 xbf2ef200 1}
+	 {x40a00000 xc03b7000 xbef2d400 1 xbef2d400 1}
+	 {x40c00000 xc0510980 -}
+	 {x40e00000 xc03f1a80 -}
+	 {x41000000 xc04bc500 xbefa2800 1 xbefa2800 1}
+	 {x41100000 xc07da480 xbf0cc900 1 xbf0cc900 1}
+	 {x41200000 xc08914c0 xbeecb800 1 xbeecb800 1}
+	 {x41300000 xc09c6940 -}
+	 {x41400000 xc09b3b00 -}
+	 {x41500000 xc0a1b8c0 -}
+	 {x41600000 xc0927040 x3ee58600 1 x3ee58600 1}
+	 {x41700000 xc0850800 x3d382000 1 x3d382000 1}
+	 {x41800000 xc0848d40 -}
+	 {x41880000 xc0896540 -}
+	 {x41900000 xc07cc400 -}
+	 {x41980000 xc0813200 xbe6e2400 1 xbe6e2400 1}
+	 {x41a00000 xc08d4440 xbebb6a00 1 xbebb6a00 1}
+	 {x41a80000 xc0989f40 xbee27200 1 xbee27200 1}
+	 {x41b00000 xc0a99280 xbeb92600 1 xbeb92600 1}
+	 {x41b80000 xc0afc400 xbe80b000 1 xbe80b000 1}
+	 {x41c00000 xc0b9a880 xbf0d5600 1 xbf0d5600 1}
+	 {x41c80000 xc0d31980 xbf8db580 1 xbf8db580 1}
+	 {x41d00000 xc10041a0 xbfbfb780 1 xbfbfb780 1}
+	 {x41d80000 xc1197aa0 xbfc77500 1 xbfc77500 1}
+	 {x41e00000 xc1321ee0 xbfd56c00 1 xbfd56c00 1}
+	 {x41e80000 xc14ed5a0 xbfdae980 1 xbfdae980 1}
+	 {x41f00000 xc168d940 xbf923480 1 xbf923480 1}
+	 {x41f80000 xc17362c0 xbf0f4900 1 xbf0f4900 1}
+	 {x42000000 xc17ac260 xbec00a00 1 xbec00a00 1}
+	 {x42040000 xc17f6360 xbeac2000 1 xbeac2000 1}
+	 {x42080000 xc182c230 -}
+	 {x420c0000 xc18202f0 -}
+	 {x42100000 xc1823360 xbd915000 1 xbd915000 1}
+	 {x42140000 xc1880f80 xbf063800 1 xbf063800 1}
+	 {x42180000 xc18a96e0 xbe8ee600 1 xbe8ee600 1}
+	 {x421c0000 xc18c86b0 xbea7c400 1 xbea7c400 1}
+	 {x42200000 xc18fd500 xbea88200 1 xbea88200 1}
+	 {x42240000 xc191cac0 xbda3b000 1 xbda3b000 1}
+	 {x42280000 xc1920150 -}
+	 {x422c0000 xc191f460 x3c9b4000 1 x3c9b4000 1}
+	 {x42300000 xc18f26f0 -}
+	 {x42340000 xc196b240 xbfac1e00 1 xbfac1e00 1}
+	 {x42380000 xc1a4aab0 xbfcb0480 1 xbfcb0480 1}
+	 {x423c0000 xc1b012d0 xbf9f9d80 1 xbf9f9d80 1}
+	 {x42400000 xc1b89e60 xbfafa700 1 xbfafa700 1}
+	 {x42440000 xc1c607b0 xbfb8fe80 1 xbfb8fe80 1}
+	 {x42480000 xc1cfbe30 -}
+	 {x424c0000 xc1cf5820 x3e191800 1 x3e191800 1}
+	 {x42500000 xc1c7f030 -}
+	 {x42540000 xc1ce7320 xbf84ba80 1 xbf84ba80 1}
+	 {x42580000 xc1d88780 xbf91b700 1 xbf91b700 1}
+	 {x425c0000 xc1e0aa00 xbf4e9700 1 xbf4e9700 1}
+	 {x42600000 xc1e570f0 xbf27ed00 1 xbf27ed00 1}
+	 {x42640000 xc1eb28d0 xbf5d5300 1 xbf5d5300 1}
+	 {x42680000 xc1f34620 xbf34ca00 1 xbf34ca00 1}
+	 {x426c0000 xc1f67570 xbec52800 1 xbec52800 1}
+	 {x42700000 xc1f96f60 xbef6fc00 1 xbef6fc00 1}
+	 {x42740000 xc1fe2d50 xbeebf400 1 xbeebf400 1}
+	 {x42780000 xc2006780 xbeae3600 1 xbeae3600 1}
+	 {x427c0000 xc201cf80 xbf03dd00 1 xbf03dd00 1}
+	 {x42800000 xc2048668 xbf465a00 1 xbf465a00 1}
+	 {x42820000 xc2080250 xbf7b9b00 1 xbf7b9b00 1}
+	 {x42840000 xc20c6340 xbfa1c280 1 xbfa1c280 1}
+	 {x42860000 xc2121e78 xbfe9e400 1 xbfe9e400 1}
+	 {x42880000 xc21b0180 xc0026480 1 xc0026480 1}
+	 {x428a0000 xc2226b08 xbfce2100 1 xbfce2100 1}
+	 {x428c0000 xc227e390 xbfc53980 1 xbfc53980 1}
+	 {x428e0000 xc22ebea0 xbfd3cb00 1 xbfd3cb00 1}
+	 {x42900000 xc2352040 xbfe57480 1 xbfe57480 1}
+	 {x42920000 xc23d15e8 xbfebcf00 1 xbfebcf00 1}
+	 {x42940000 xc243dd30 xbfb25900 1 xbfb25900 1}
+	 {x42960000 xc2483b78 xbf65f400 1 xbf65f400 1}
+	 {x42980000 xc24b0cd0 xbf3b1400 1 xbf3b1400 1}
+	 {x429a0000 xc24e1418 xbf193100 1 xbf193100 1}
+	 {x429c0000 xc24fd658 xbecbc200 1 xbecbc200 1}
+	 {x429e0000 xc2514320 xbe9c9a00 1 xbe9c9a00 1}
+	 {x42a00000 xc25248c0 xbe90ec00 1 xbe90ec00 1}
+	 {x42a20000 xc25386d0 xbe7bcc00 1 xbe7bcc00 1}
+	 {x42a40000 xc2544058 xbe95e400 1 xbe95e400 1}
+	 {x42a60000 xc255de60 xbef27000 1 xbef27000 1}
+	 {x42a80000 xc2580a18 xbf90a880 1 xbf90a880 1}
+	 {x42aa0000 xc25ee8e8 xbfb78000 1 xbfb78000 1}
+	 {x42ac0000 xc2638218 xbfacc200 1 xbfacc200 1}
+	 {x42ae0000 xc269b508 xbfd57200 1 xbfd57200 1}
+	 {x42b00000 xc270d938 xc01e2ec0 1 xc01e2ec0 1}
+	 {x42b20000 xc27d7ae0 xc02e2ac0 1 xc02e2ac0 1}
+	 {x42b40000 xc2834f48 xc011e540 1 xc011e540 1}
+	 {x42b60000 xc287dbc4 xbfd47b00 1 xbfd47b00 1}
+	 {x42b80000 xc289f320 xbf888480 1 xbf888480 1}
+	 {x42ba0000 xc28c1fe8 xbfeb9200 1 xbfeb9200 1}
+	 {x42bc0000 xc2914fb0 xc02c6840 1 xc02c6840 1}
+	 {x42be0000 xc296e66c xc008d840 1 xc008d840 1}
+	 {x42c00000 xc299dd34 -}
+	 {x42c20000 xc2990158 x3fa4e500 1 x3fa4e500 1}
+	 {x42c40000 xc293e6e4 -}
+	 {x42c60000 xc2979acc xbfc33180 1 xbfc33180 1}
+	 {x42c80000 xc29a0070 xbfb45e00 1 xbfb45e00 1}
+	 {x42ca0000 xc29d3dbc xbfcc7180 1 xbfcc7180 1}
+	 {x42cc0000 xc2a063fc xbfe9a700 1 xbfe9a700 1}
+	 {x42ce0000 xc2a48af4 xbfd2f800 1 xbfd2f800 1}
+	 {x42d00000 xc2a6fbbc xbf87e900 1 xbf87e900 1}
+	 {x42d20000 xc2a8ca3c xbf6a8900 1 xbf6a8900 1}
+	 {x42d40000 xc2aaa5e0 xbf8f1d00 1 xbf8f1d00 1}
+	 {x42d60000 xc2ad4324 xbf994780 1 xbf994780 1}
+	 {x42d80000 xc2af701c xbfb3d080 1 xbfb3d080 1}
+	 {x42da0000 xc2b2e1a8 xbfc6e900 1 xbfc6e900 1}
+	 {x42dc0000 xc2b5a764 xbfbdad00 1 xbfbdad00 1}
+	 {x42de0000 xc2b8cf10 xbfc5ec00 1 xbfc5ec00 1}
+	 {x42e00000 xc2bbd6c4 xbfcdee00 1 xbfcdee00 1}
+	 {x42e20000 xc2bf3e80 xbff27500 1 xbff27500 1}
+	 {x42e40000 xc2c36a6c xc00f9700 1 xc00f9700 1}
+	 {x42e60000 xc2c837f0 xc0106f00 1 xc0106f00 1}
+	 {x42e80000 xc2cc715c xc008cfc0 1 xc008cfc0 1}
+	 {x42ea0000 xc2d0c4ec xbffdce80 1 xbffdce80 1}
+	 {x42ec0000 xc2d45fd0 xc002a080 1 xc002a080 1}
+	 {x42ee0000 xc2d8eef4 xbfd52d80 1 xbfd52d80 1}
+	 {x42f00000 xc2db093c xbf31b900 1 xbf31b900 1}
+	 {x42f20000 xc2dbb5d8 -}
+	 {x42f40000 xc2d9b3b4 -}
+	 {x42f60000 xc2db310c xbf3f5880 1 xbf3f5880 1}
+	 {x42fc0000 xc2dfae78 xbf82cae0 1 xbf82cae0 1}
+	 {x42fe0000 xc2e35dba xbfa5b040 1 xbfa5b040 1}
+	 {x43000000 xc2e4dbfa xbfd6dd80 1 xbfd6dd80 1}
+	 {x43010000 xc2ea14a6 xbff4d640 1 xbff4d640 1}
+	 {x43020000 xc2ec82ac xbfb32d00 1 xbfb32d00 1}
+	 {x43030000 xc2efae0e xbfd03a40 1 xbfd03a40 1}
+	 {x43040000 xc2f3047e xc0289520 1 xc0289520 1}
+	 {x43050000 xc2fa3760 xc01ed512 1 xc01ed512 1}
+	 {x430b0000 xc30ae18d xc006c292 1 xc006c292 1}
+	 {x430c0000 xc30bd8f8 xbff3e440 1 xbff3e440 1}
+	 {x430d0000 xc30eb11e xbff1f980 1 xbff1f980 1}
+	 {x430e0000 xc30fa0de xbf8efb80 1 xbf8efb80 1}
+	 {x430f0000 xc310ed0c xbf8f3000 1 xbf8f3000 1}
+	 {x43100000 xc311dd9e xbf511580 1 xbf511580 1}
+	 {x43110000 xc3128f37 xbf25c200 1 xbf25c200 1}
+	 {x43120000 xc3132922 xbf656500 1 xbf656500 1}
+	 {x43130000 xc3145a01 xbfaa9b80 1 xbfaa9b80 1}
+	 {x43140000 xc315d390 xbffe8100 1 xbffe8100 1}
+	 {x43150000 xc3185405 xc02ddd20 1 xc02ddd20 1}
+	 {x43160000 xc31b4279 xbfec71c0 1 xbfec71c0 1}
+	 {x43170000 xc31c05cc xbf531e00 1 xbf531e00 1}
+	 {x43180000 xc31ce8b5 xbfeb2dc0 1 xbfeb2dc0 1}
+	 {x43190000 xc31fb283 xc029b800 1 xc029b800 1}
+	 {x431a0000 xc3223675 xc019b740 1 xc019b740 1}
+	 {x431b0000 xc324803d xc0231220 1 xc0231220 1}
+	 {x431c0000 xc3274f06 xc025f360 1 xc025f360 1}
+	 {x431d0000 xc329afd8 xc01afa00 1 xc01afa00 1}
+	 {x431e0000 xc32c26d6 xc032c8e0 1 xc032c8e0 1}
+	 {x431f0000 xc32f461f xc04a1260 1 xc04a1260 1}
+	 {x43200000 xc3327769 xc03cf860 1 xc03cf860 1}
+	 {x43210000 xc3352de2 xc0328040 1 xc0328040 1}
+	 {x43220000 xc3380b6b xc0372340 1 xc0372340 1}
+	 {x43230000 xc33ae6fc xc0208ce0 1 xc0208ce0 1}
+	 {x43240000 xc33d0fd2 xbff99340 1 xbff99340 1}
+	 {x43250000 xc33ecd49 xbfdc4140 1 xbfdc4140 1}
+	 {x43260000 xc34080d7 xbfd177c0 1 xbfd177c0 1}
+	 {x43270000 xc3421328 xbfbf9d80 1 xbfbf9d80 1}
+	 {x43280000 xc3437f4d xbfb52d00 1 xbfb52d00 1}
+	 {x43290000 xc344e7dc xbfc17980 1 xbfc17980 1}
+	 {x432a0000 xc3468533 xbfd49080 1 xbfd49080 1}
+	 {x432b0000 xc3483a1e xbfeff880 1 xbfeff880 1}
+	 {x432c0000 xc34a4515 xbff89c80 1 xbff89c80 1}
+	 {x432d0000 xc34c1c90 xc005f660 1 xc005f660 1}
+	 {x432e0000 xc34e74c8 xc015fa60 1 xc015fa60 1}
+	 {x432f0000 xc350cc63 xc015dcf0 1 0 1}}
+        {{0 x3fede300 0 1 xbfede480 1}
+	 {1 0 xbfede000 1 xbfede000 1}
+	 {x40000000 xbfeddd00 xbfe65b00 1 xbfe65b00 1}
+	 {x40400000 xc0665b00 xbfcaf380 1 xbfcaf380 1}
+	 {x40800000 xc0a0f100 xbf8fcec0 1 xbf8fcec0 1}
+	 {x40a00000 xc0bb14e0 xbf1df980 1 xbf1df980 1}
+	 {x40c00000 xc0c86f60 -}
+	 {x40e00000 xc0c55480 x3dead000 1 x3dead000 1}
+	 {x41000000 xc0c118e0 x3e5d4400 1 x3e5d4400 1}
+	 {x41100000 xc0b78040 x3ed1f600 1 x3ed1f600 1}
+	 {x41200000 xc0a6da20 x3f134f00 1 x3f134f00 1}
+	 {x41300000 xc092ac80 x3f49b200 1 x3f49b200 1}
+	 {x41400000 xc068db40 x3f9156c0 1 x3f9156c0 1}
+	 {x41500000 xc0140240 x3fcde280 1 x3fcde280 1}
+	 {x41600000 xbed7c600 x3ff05100 1 x3ff05100 1}
+	 {x41700000 x3fb89d80 x3fdbdf00 1 x3fdbdf00 1}
+	 {x41800000 x4040e640 x3f9e4540 1 x3f9e4540 1}
+	 {x41880000 x407a9400 x3f3e8500 1 x3f3e8500 1}
+	 {x41900000 x40901460 x3ec0a100 1 x3ec0a100 1}
+	 {x41980000 x40955e20 -}
+	 {x41a00000 x408833a0 xbf243d80 1 xbf243d80 1}
+	 {x41a80000 x40589d80 xbf84cb40 1 xbf84cb40 1}
+	 {x41b00000 x400b9c00 xbf84b6c0 1 xbf84b6c0 1}
+	 {x41b80000 x3fa7cd80 xbf621100 1 xbf621100 1}
+	 {x41c00000 x3ed49c00 xbf828480 1 xbf828480 1}
+	 {x41c80000 xbf3a7700 xbf858240 1 xbf858240 1}
+	 {x41d00000 xbfd5dd80 xbf76bc00 1 xbf76bc00 1}
+	 {x41d80000 xc029fbc0 xbf6e9d00 1 xbf6e9d00 1}
+	 {x41e00000 xc0623d40 xbf6bd000 1 xbf6bd000 1}
+	 {x41e80000 xc08ff1e0 xbf4ff180 1 xbf4ff180 1}
+	 {x41f00000 xc0a51b00 xbf040680 1 xbf040680 1}
+	 {x41f80000 xc0b0f380 xbe87ee00 1 xbe87ee00 1}
+	 {x42000000 xc0b618c0 -}
+	 {x42040000 xc0a4bfe0 x3f6bdc00 1 x3f6bdc00 1}
+	 {x42080000 xc0764380 x3fba5540 1 x3fba5540 1}
+	 {x420c0000 xc00f2a80 x3fc51ec0 1 x3fc51ec0 1}
+	 {x42100000 xbf449300 x3fbc3600 1 x3fbc3600 1}
+	 {x42140000 x3f342e00 x3fbaf000 1 x3fbaf000 1}
+	 {x42180000 x4009cb40 x3fa2e440 1 x3fa2e440 1}
+	 {x421c0000 x404fefc0 x3f5e0a80 1 x3f5e0a80 1}
+	 {x42200000 x4078d080 x3dae1800 1 x3dae1800 1}
+	 {x42240000 x407aa0c0 -}
+	 {x42280000 x405acd00 xbf554600 1 xbf554600 1}
+	 {x422c0000 x400ffdc0 xbfb1ca00 1 xbfb1ca00 1}
+	 {x42300000 x3f240c00 xbfef7e40 1 xbfef7e40 1}
+	 {x42340000 xbfbf0100 xc006ae60 1 xc006ae60 1}
+	 {x42380000 xc06459c0 xbfd0e840 1 xbfd0e840 1}
+	 {x423c0000 xc0983460 xbf86d380 1 xbf86d380 1}
+	 {x42400000 xc0b596a0 xbf504180 1 xbf504180 1}
+	 {x42440000 xc0cc44c0 xbedfde00 1 xbedfde00 1}
+	 {x42480000 xc0d19260 -}
+	 {x424c0000 xc0cb8160 x3e113c00 1 x3e113c00 1}
+	 {x42500000 xc0c87ea0 x3da56400 1 x3da56400 1}
+	 {x42540000 xc0c65640 x3e4f2400 1 x3e4f2400 1}
+	 {x42580000 xc0b7e7c0 x3f34f700 1 x3f34f700 1}
+	 {x425c0000 xc0991880 x3f950600 1 x3f950600 1}
+	 {x42600000 xc05ac980 x3fbc2a40 1 x3fbc2a40 1}
+	 {x42640000 xbfec0d80 x3fdc7600 1 x3fdc7600 1}
+	 {x42680000 x3cd64000 x3fcf7700 1 x3fcf7700 1}
+	 {x426c0000 x3fb2e080 x3f95d100 1 x3f95d100 1}
+	 {x42700000 x40177d80 x3f53c580 1 x3f53c580 1}
+	 {x42740000 x40435300 x3f06eb80 1 x3f06eb80 1}
+	 {x42780000 x405af340 -}
+	 {x427c0000 x405402c0 xbea68c00 1 xbea68c00 1}
+	 {x42800000 x4028d700 xbf57bb80 1 xbf57bb80 1}
+	 {x42820000 x3fd04a00 xbf880f40 1 xbf880f40 1}
+	 {x42840000 x3f031f00 xbf8efac0 1 xbf8efac0 1}
+	 {x42860000 xbf1b5700 xbf9315c0 1 xbf9315c0 1}
+	 {x42880000 xbfe49c00 xbf96c600 1 xbf96c600 1}
+	 {x428a0000 xc03d9bc0 xbf91d240 1 xbf91d240 1}
+	 {x428c0000 xc0821020 xbf8bf940 1 xbf8bf940 1}
+	 {x428e0000 xc0a4ca80 xbf71c480 1 xbf71c480 1}
+	 {x42900000 xc0be8140 xbf604f80 1 xbf604f80 1}
+	 {x42920000 xc0dcde60 xbf394580 1 xbf394580 1}
+	 {x42940000 xc0ecd2a0 xbe95fa00 1 xbe95fa00 1}
+	 {x42960000 xc0eff280 -}
+	 {x42980000 xc0e8bc80 x3f182600 1 x3f182600 1}
+	 {x429a0000 xc0c9e900 x3f8ec8c0 1 x3f8ec8c0 1}
+	 {x429c0000 xc0a15820 x3fb24980 1 x3fb24980 1}
+	 {x429e0000 xc0618880 x3fb50780 1 x3fb50780 1}
+	 {x42a00000 xc00da8c0 x3faf2940 1 x3faf2940 1}
+	 {x42a20000 xbf497d00 x3fad9580 1 x3fad9580 1}
+	 {x42a40000 x3eff6600 x3f8db640 1 x3f8db640 1}
+	 {x42a60000 x3fb6ae00 x3f1df900 1 x3f1df900 1}
+	 {x42a80000 x3fddd280 -}
+	 {x42aa0000 x3fae9400 xbf022b00 1 xbf022b00 1}
+	 {x42ac0000 x3f374f00 xbf69bd00 1 xbf69bd00 1}
+	 {x42ae0000 xbeeca400 xbfad2a00 1 xbfad2a00 1}
+	 {x42b00000 xbffeac80 xbfd1fcc0 1 xbfd1fcc0 1}
+	 {x42b20000 xc06f9140 xbfd53ac0 1 xbfd53ac0 1}
+	 {x42b40000 xc0aa4880 xbf9ff300 1 xbf9ff300 1}
+	 {x42b60000 xc0c7c220 xbf3aca80 1 xbf3aca80 1}
+	 {x42b80000 xc0d8fb20 xbf01e200 1 xbf01e200 1}
+	 {x42ba0000 xc0e83aa0 -}
+	 {x42bc0000 xc0e805c0 x3c3e0000 1 x3c3e0000 1}
+	 {x42be0000 xc0e77ca0 -}
+	 {x42c00000 xc0e946a0 xbde0d400 1 xbde0d400 1}
+	 {x42c20000 xc0ee8340 -}
+	 {x42c40000 xc0ddd340 x3f20bd00 1 x3f20bd00 1}
+	 {x42c60000 xc0c65400 x3f5a8780 1 x3f5a8780 1}
+	 {x42c80000 xc0a73160 x3f7a9c00 1 x3f7a9c00 1}
+	 {x42ca0000 xc087ad00 x3f7a7280 1 x3f7a7280 1}
+	 {x42cc0000 xc0512980 x3f79f500 1 x3f79f500 1}
+	 {x42ce0000 xc0125f80 x3f716a80 1 x3f716a80 1}
+	 {x42d00000 xbfb0e880 x3f1d8b00 1 x3f1d8b00 1}
+	 {x42d20000 xbf873400 -}
+	 {x42d40000 xbf87cb00 xbc628000 1 xbc628000 1}
+	 {x42d60000 xbfd11680 xbf4a5d00 1 xbf4a5d00 1}
+	 {x42d80000 xc0291400 xbf8e9d80 1 xbf8e9d80 1}
+	 {x42da0000 xc07728c0 xbf9e14c0 1 xbf9e14c0 1}
+	 {x42dc0000 xc0a39460 xbf9e8540 1 xbf9e8540 1}
+	 {x42de0000 xc0cad700 xbf8e9040 1 xbf8e9040 1}
+	 {x42e00000 xc0eadc80 xbf89f780 1 xbf89f780 1}
+	 {x42e20000 xc107e960 xbf867200 1 xbf867200 1}
+	 {x42e40000 xc1170ac0 xbf54f300 1 xbf54f300 1}
+	 {x42e60000 xc12287c0 xbf226200 1 xbf226200 1}
+	 {x42e80000 xc12b5700 xbefcf800 1 xbefcf800 1}
+	 {x42ea0000 xc1325740 xbebb9200 1 xbebb9200 1}
+	 {x42ec0000 xc1371020 xbeb14600 1 xbeb14600 1}
+	 {x42ee0000 xc13d6ba0 -}
+	 {x42f00000 xc12ec290 -}
+	 {x42f20000 xc133e160 -}
+	 {x42f40000 xc119b850 x3eda8200 1 x3eda8200 1}
+	 {x42f60000 xc11771a0 x3eda8200 1 x3eda8200 1}
+	 {x42fc0000 xc0016e40 x400c9b20 1 x400c9b20 1}
+	 {x42fe0000 xbf2d6800 x3e89b800 1 x3e89b800 1}
+	 {x43000000 xbf167400 x3e81b200 1 x3e81b200 1}
+	 {x43010000 xbe2ed800 x3ee1c100 1 x3ee1c100 1}
+	 {x43020000 x3e969a00 -}
+	 {x43030000 xbfa91b80 xc0016b60 1 xc0016b60 1}
+	 {x43040000 xc0700380 xc015e000 1 xc015e000 1}
+	 {x43050000 xc0c026e0 xbf5f7c6e 1 xbf5f7c6e 1}
+	 {x430b0000 xc11dc750 -}
+	 {x430c0000 xc1074fd0 x3eccfc00 1 x3eccfc00 1}
+	 {x430d0000 xc1052d30 x3e30cc00 1 x3e30cc00 1}
+	 {x430e0000 xc101c970 x3f22b400 1 x3f22b400 1}
+	 {x430f0000 xc0d6d2c0 x3fb04480 1 x3fb04480 1}
+	 {x43100000 xc0ab70a0 x3fbb3140 1 x3fbb3140 1}
+	 {x43110000 xc0727440 x3fcac1c0 1 x3fcac1c0 1}
+	 {x43120000 xc00c1f80 x3fc21c80 1 x3fc21c80 1}
+	 {x43130000 xbf415f00 x3f7e2f80 1 x3f7e2f80 1}
+	 {x43140000 xbe507c00 x3ee66900 1 x3ee66900 1}
+	 {x43150000 x3e142800 -}
+	 {x43160000 xbd9d9800 xbed0c900 1 xbed0c900 1}
+	 {x43170000 xbf2bbf00 xbf48d980 1 xbf48d980 1}
+	 {x43180000 xbfd2b300 xbf928080 1 xbf928080 1}
+	 {x43190000 xc03d7040 xbfb62ac0 1 xbfb62ac0 1}
+	 {x431a0000 xc08fc220 xbfc69a80 1 xbfc69a80 1}
+	 {x431b0000 xc0c20560 xbfc5cf80 1 xbfc5cf80 1}
+	 {x431c0000 xc0f2a9e0 xbf9e3100 1 xbf9e3100 1}
+	 {x431d0000 xc1088ef0 xbf4aee00 1 xbf4aee00 1}
+	 {x431e0000 xc112b2b0 xbf086180 1 xbf086180 1}
+	 {x431f0000 xc1199b20 xbec74200 1 xbec74200 1}
+	 {x43200000 xc11f26d0 xbeba6c00 1 xbeba6c00 1}
+	 {x43210000 xc12541e0 xbed33400 1 xbed33400 1}
+	 {x43220000 xc12c5a10 xbef27a00 1 xbef27a00 1}
+	 {x43230000 xc1346980 xbeb12b00 1 xbeb12b00 1}
+	 {x43240000 xc1376cc0 -}
+	 {x43250000 xc12cbfa0 x3f608300 1 x3f608300 1}
+	 {x43260000 xc11b5c60 x3faf5400 1 x3faf5400 1}
+	 {x43270000 xc100eaa0 x3fd42f40 1 x3fd42f40 1}
+	 {x43280000 xc0cca120 x3fcdb440 1 x3fcdb440 1}
+	 {x43290000 xc09afb20 x3fc46c00 1 x3fc46c00 1}
+	 {x432a0000 xc054d640 x3faa7bc0 1 x3faa7bc0 1}
+	 {x432b0000 xc00b7a80 x3f58b880 1 x3f58b880 1}
+	 {x432c0000 xbfd0f400 x3e98a600 1 x3e98a600 1}
+	 {x432d0000 xbfc43b80 -}
+	 {x432e0000 xbfec4300 xbf06b200 1 xbf06b200 1}
+	 {x432f0000 xc02576c0 xbf58a680 1 0 1}}       0 0 0 xc0467e35}
+       {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+       {layer Upper_Leg
+        {f 2097664}
+        {t x439d8000 x43593333 0 x42717599 xc1e831a2 0 0 0 x40213363}
+        {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+        {layer Middle_Leg
+	 {f 2097664}
+	 {t x43878000 x43168000 0 x3eade435 x40ace8d7 0 0 0 xc137883d}
+	 {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+	 {layer Foot
+	  {f 2097664}
+	  {t x437d8000 x42a10000 0 x3ff6e5f5 x3faf8bec 0 0 0 x3da3a2f9
+	   {{0 1 -}
+	    {x42180000}
+	    {x423c0000}
+	    {x42ae0000}}}
+	  {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+	  {curvegroup Bezier4 512 bezier
+	   {{cc
+	     {f 8192}
+	     {px 0
+	      {x3ffa4771 x40949a81}
+	      {x4353fff9 x42a93333}
+	      {xbffa476a xc0949a82}
+	      {xc1300010 x3ecccc00}
+	      {x4368076e x42911608}
+	      {x41300010 xbecccc00}
+	      {xbf999a00 xc08cccd0}
+	      {x43844b82 x4284750b}
+	      {x3f999a00 x408cccd0}
+	      {x3fcccc00 xc0a00000}
+	      {x438471e5 x42a77d9b}
+	      {xbfcccc00 x40a00000}
+	      {x40c66680 x3f4ccd00}
+	      {x437cccec x42bb7d92}
+	      {xc0c66680 xbf4ccd00}
+	      {x411cccc0 x3f4ccc80}
+	      {x436c665f x42a93333}
+	      {xc11cccc0 xbf4ccc80}}}	   idem}
+	   {tx x42ae0000 x43741111 x42a43333}
+	   {a osw x41200000 osf 0 str 1 spx x43b40000 spy x43730000 sb 1 ltn x42ae0000 ltm x42ae0000 tt x40800000}}}
+	 {curvegroup Bezier3 512 bezier
+	  {{cc
+	    {f 8192}
+	    {px x423c0000
+	     {xbf4e5600 xc0e9dc00}
+	     {x43851a5b x43188213}
+	     {x4148ddc0 x403fef40}
+	     {xc0666680 x41166660}
+	     {x4390f2d0 x430ee9dd}
+	     {x40666680 xc1166660}
+	     {x40d33340 x413cccc8}
+	     {x438d68b3 x42d551a4}
+	     {xc0d33340 xc13cccc8}
+	     {x40ccccc0 x401999a0}
+	     {x4386253d x42a9b80b}
+	     {xc0ccccc0 xc01999a0}
+	     {xc0266640 xc10cccc8}
+	     {x437b48f3 x42bb6241}
+	     {x40266640 x410cccc8}
+	     {0 xc1366668}
+	     {x43828c68 x42edcb67}
+	     {0 x41366668}}}	  idem}
+	  {t
+	   {{0 x4386fdad -}
+	    {x42ae0000}}
+	   {{0 x42ec9999 -}
+	    {x42ae0000}}
+	   {{x42ae0000 0}}
+	   {{0 0 -}
+	    {x42ae0000}}
+	   {{0 0 -}
+	    {x42ae0000}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{0 xbf8b6fe3 0 1 x3c4d2616 1}
+	    {x42ae0000 0 x3c4d2616 1 0 1}}
+	   {{0 1 -}
+	    {x42ae0000}}
+	   {{0 1 -}
+	    {x42ae0000}}
+	   {{x42ae0000 1}}
+	   {{0 0 -}
+	    {x42ae0000}}
+	   {{0 0 -}
+	    {x42ae0000}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 1}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 1}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 1}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 0}}
+	   {{x42ae0000 1}}}
+	  {a osw x41200000 osf 0 str 1 spx x43b40000 spy x43730000 sb 1 ltn x42ae0000 ltm x42ae0000 tt x40800000}}}
+        {curvegroup Bezier2 512 bezier
+	 {{cc
+	   {f 8192}
+	   {p
+	    {}
+	    {x4390ffff x435f3333}
+	    {}
+	    {xc0733300 x411999a0}
+	    {x43a38000 x43610000}
+	    {x40733300 xc11999a0}
+	    {x417ccce0 x41633330}
+	    {x439d3333 x433bcccd}
+	    {xc17ccce0 xc1633330}
+	    {x404ccd00 x40b999a0}
+	    {x43919999 x4316cccd}
+	    {xc04ccd00 xc0b999a0}
+	    {x40000000 xc1200000}
+	    {x4384b332 x4316cccd}
+	    {xc0000000 x41200000}
+	    {xc08cccc0 xc14cccd0}
+	    {x438ddc4e x43520ea0}
+	    {x408cccc0 x414cccd0}}}
+	  {cc
+	   {f 8192}
+	   {p
+	    {}
+	    {}
+	    {}
+	    {xc0733300 x411999a0}
+	    {}
+	    {x40733300 xc11999a0}
+	    {x417ccce0 x41633330}
+	    {}
+	    {xc17ccce0 xc1633330}
+	    {x404ccd00 x40b999a0}
+	    {}
+	    {xc04ccd00 xc0b999a0}
+	    {x40000000 xc1200000}
+	    {}
+	    {xc0000000 x41200000}
+	    {xc08cccc0 xc14cccd0}
+	    {}
+	    {x408cccc0 x414cccd0}}}}
+	 {tx x42ae0000 x4393a4b9 x433f46b4}
+	 {a osw x41200000 osf 0 str 1 spx x43b40000 spy x43730000 sb 1 ltn x42ae0000 ltm x42ae0000 tt x40800000}}}}}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {360 243}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 87
+ lifetime_end 87
+ view {}
+ motionblur_on true
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto1
+ selected true
+ xpos -93
+ ypos -30
+}
+Viewer {
+ frame 171
+ frame_range 0-175
+ name Viewer1
+ xpos -93
+ ypos 110
+}
+Tracker4 {
+ inputs 0
+ tracks { { 1 31 1 } 
+{ { 5 1 20 enable e 1 } 
+{ 3 1 75 name name 1 } 
+{ 2 1 58 track_x track_x 1 } 
+{ 2 1 58 track_y track_y 1 } 
+{ 2 1 63 offset_x offset_x 1 } 
+{ 2 1 63 offset_y offset_y 1 } 
+{ 4 1 27 T T 1 } 
+{ 4 1 27 R R 1 } 
+{ 4 1 27 S S 1 } 
+{ 2 0 45 error error 1 } 
+{ 1 1 0 error_min error_min 1 } 
+{ 1 1 0 error_max error_max 1 } 
+{ 1 1 0 pattern_x pattern_x 1 } 
+{ 1 1 0 pattern_y pattern_y 1 } 
+{ 1 1 0 pattern_r pattern_r 1 } 
+{ 1 1 0 pattern_t pattern_t 1 } 
+{ 1 1 0 search_x search_x 1 } 
+{ 1 1 0 search_y search_y 1 } 
+{ 1 1 0 search_r search_r 1 } 
+{ 1 1 0 search_t search_t 1 } 
+{ 2 1 0 key_track key_track 1 } 
+{ 2 1 0 key_search_x key_search_x 1 } 
+{ 2 1 0 key_search_y key_search_y 1 } 
+{ 2 1 0 key_search_r key_search_r 1 } 
+{ 2 1 0 key_search_t key_search_t 1 } 
+{ 2 1 0 key_track_x key_track_x 1 } 
+{ 2 1 0 key_track_y key_track_y 1 } 
+{ 2 1 0 key_track_r key_track_r 1 } 
+{ 2 1 0 key_track_t key_track_t 1 } 
+{ 2 1 0 key_centre_offset_x key_centre_offset_x 1 } 
+{ 2 1 0 key_centre_offset_y key_centre_offset_y 1 } 
+} 
+{ 
+ { {curve K 1} "track 1" {curve 368.2999878 367.6808167 366.8990479 366.118866 365.3631592 364.7521057 364.4146118 364.6948242 364.4969177 363.7176514 363.3970337 362.7929688 362.8298645 362.6270142 363.1046143 363.5235901 363.5385742 363.387207 363.7313538 363.6434631 363.2662354 362.911377 362.3816833 362.1881409 361.8789978 361.0839539 359.6647949 358.0883789 356.5482788 354.7536621 353.1277771 352.4692078 352.0083618 351.7190552 351.3359985 351.4293823 351.4057312 350.6732483 350.3571472 350.1150513 349.7018127 349.4568176 349.4301758 349.4364929 349.7868042 348.8437805 347.0974731 345.6716309 344.6034851 342.927063 341.7129517 341.7627869 342.6885376 341.8746033 340.6146545 339.5978088 339.0006714 338.2858887 337.2715759 336.8734741 336.5014343 335.9086914 335.5797424 335.2281799 334.5495605 333.6785583 332.5838928 331.151062 328.9293518 327.0762939 325.7085876 323.9946594 322.3993225 320.4094238 318.7148132 317.6227417 316.9183044 316.1611938 315.7214966 315.3652649 315.1097717 314.7991638 314.617981 314.2136536 313.6709595 311.9533691 310.803772 309.2540283 307.468689 304.3108215 302.0259705 299.7515869 298.7059631 297.6184998 295.025177 292.2307739 290.7487793 291.1781921 293.7298584 291.878479 290.6799622 289.0602417 287.4855347 285.4094238 284.1891479 283.2858276 282.356842 281.0496826 279.961853 278.2400818 276.8538818 275.2763977 273.7613525 272.0587463 269.9729614 267.5715637 265.4594116 263.2962036 261.4936829 259.2141113 258.1627808 257.8256531 258.829834 258.085022 x126 255.8400574 x127 253.997757 253.2511749 250.6404877 249.4255981 247.8408661 246.1720428 242.5726624 x139 228.7997589 x140 227.8332825 224.9889526 224.0524292 222.7548523 221.8151245 221.1213837 220.5201416 219.3292389 217.8544006 215.3526154 212.4211578 211.6581726 210.7718048 207.9835052 205.4680939 203.1798859 200.3721313 197.993927 195.5291138 192.4069061 189.2143707 186.5015869 183.6362152 180.7785339 178.6190186 176.8789215 175.177536 173.6059875 172.183548 170.775116 169.1605072 167.4537964 165.410965 163.5692444 161.2246399 158.882431} {curve 232 230.14151 228.2832031 226.5422058 225.1120911 224.2952118 223.8779144 223.9749451 224.1072235 224.4071045 224.9273834 225.5579529 226.5031281 227.8288727 229.7200775 231.5838165 233.1555634 234.0567932 234.6439972 234.8092499 234.3978119 233.526123 232.3229065 231.4524689 230.5567627 229.4131317 228.4706879 227.4855194 226.6065216 225.6432343 224.9819641 224.6117859 224.4509888 224.9930878 226.2936401 227.904541 229.373642 230.8453369 232.2945404 233.3905182 234.0292358 234.0575714 233.5602722 232.3913727 230.7823181 228.649292 226.5735321 225.3851166 224.4668732 223.7581177 223.592392 223.7819672 223.8760529 223.9434814 224.3944702 225.3572693 226.7229614 228.297348 230.1676636 231.5389862 232.5085449 233.1934509 233.5626068 233.4541779 232.7796326 231.7687683 230.6537018 229.5347137 228.3554993 227.1788788 226.0770416 224.9917908 224.1882324 223.2393646 222.740799 222.643158 222.8684998 223.8318176 225.0995026 226.6175537 227.9280853 229.3544464 230.6403351 231.5686951 231.8744965 231.5054016 230.8575592 229.6793213 228.1518707 226.3982697 224.8201599 223.8990631 223.3608551 222.8843536 222.8908081 222.907547 222.8516388 222.6879883 223.2094727 223.9437561 224.9167328 225.9016418 226.8733521 227.8544312 228.7594147 229.0852356 229.0806274 228.5080109 227.4996643 226.2796478 225.0296478 223.8027649 222.8020935 221.6470337 220.7013855 219.9833679 219.4327698 218.9952087 218.7000732 218.3027344 219.2190094 218.8989868 220.5340118 220.6762695 x126 228.1191559 x127 229.4641418 229.5538025 229.9707642 230.4356537 228.8203583 226.3912964 224.1367645 x139 220.2803497 x140 221.6845245 221.8179779 222.0298309 223.4282837 224.7840118 226.3531647 227.9520874 229.3861542 229.937912 230.2861938 230.0645599 229.4706268 228.4954224 227.1815338 225.6490631 224.0783539 222.5582733 221.6066132 220.9728851 220.5411377 220.1945343 219.8129272 219.3695221 218.8657532 218.6774597 219.3447266 220.4314575 222.0842285 223.7468414 225.2983551 226.8159332 227.9621582 228.5090637 228.6084442 228.2957153 227.5561371} {curve K 0 x120 0 x122 0 x123 0 x126 0 x127 0 x129 0 x130 0 0 0 0 x139 0 x140 0 0 0 0 0} {curve K 0 x120 0 x122 0 x123 0 x126 0 x127 0 x129 0 x130 0 0 0 0 x139 0 x140 0 0 0 0 0} 1 0 0 {curve 0 8.545354955e-05 0.0002362091898 0.0003084545117 0.0002533182152 0.00033108678 0.0008850234953 0.001212612473 0.0001584493146 0.0005003128651 0.0001645360765 0.0005687642465 0.0002680820947 0.0006729551932 0.0001510054281 0.0004861274488 0.000194779127 0.0006343106006 0.000454499704 0.0001986033908 0.0005571107559 0.0002056990073 0.0003605357931 0.0002990877173 0.0003362442217 0.0004838501288 0.0006601233981 0.0007234153432 0.0001477642209 0.0005722544533 0.0003937239414 0.0006939761383 0.0007335327131 0.000774600553 0.0007751217798 0.0008630169106 0.0008833535426 0.0001366755678 0.0005721744381 0.0002145207148 0.0004634707783 0.0007075104601 0.0007526635666 0.0008349512921 0.0009247756062 0.0008580328749 0.0009180585811 0.0008964461097 0.0008894378262 0.0001309593988 0.0009821244876 0.001075530495 0.0009928734743 0.0002001185399 0.0006893717822 0.0001503214574 0.0004081115575 0.000197539063 0.000548194063 0.0007421230085 0.0001634724413 0.0007811117498 0.0003976641271 0.0008780719058 0.0001907065122 0.0002619282712 0.0002938559308 0.0004290766539 0.0009227105591 0.0001936033592 0.0001401358285 0.0004400925636 0.0004141059428 0.0005189624759 0.0001872553121 0.0004348384305 0.000574152799 0.0006343258941 0.0007964115752 0.0001172554615 0.0005455943684 0.0001686978496 0.000782319453 0.00015481596 0.0006384892936 0.0008129728052 0.0008492823427 0.0007660632549 0.0006557889959 0.0008560214067 0.0001252175045 0.0003060132331 0.0001985802612 0.0005625167497 0.000589676603 0.0006794138927 0.0003378796604 0.001137890243 0.001352872231 0.0006515481719 0.0008225032321 0.0001777615098 0.0007816229497 0.0005649474723 0.0005201546686 0.0004139548582 0.0003088336419 0.0009772458713 0.000168307833 0.0002254704392 0.0003844673422 0.0003764571351 0.0004223074582 0.0003801060368 0.0004513148855 0.0005308137519 0.0006847703548 0.00017639868 0.0006528845288 0.0009716096464 0 0 0 0 x126 0 x127 0 0 0 0 0 0 0 x139 0 x140 0 0 0 0 0 0.0006765572186 0.0002167202179 0.000637282795 0.0009331681377 0.00048338938 0.0006392013901 0.0009240175086 0.0004626043179 0.0006581112748 0.0008787353871 0.0001500431688 0.000356193574 0.0002865566821 0.0003475195654 0.0002566373193 0.0001986464469 0.0003770472189 0.0005704055378 0.0003763020405 0.000416605151 0.0003953974899 0.000496100454 0.0006247600187 0.000785218597 0.0009583736413 7.95377031e-05 0.0003702295714 0.0005480199112 0.0002292534706 0.0004442024579 0.0006229781267} 0 0.00863209 -11 -10.01 11 10.01 -41.5616 -10.2419 41.5616 10.2419 {curve} {curve 350 x120 240 x121 205 206 205 x126 203 x127 201 200 198 196 195 193 190 x139 176 x140 175 172 171 170 169} {curve 216 x120 203 x121 199 201 201 x126 208 x127 209 210 210 210 209 206 204 x139 200 x140 202 202 202 203 205} {curve 385 x120 275 x121 310 311 310 x126 308 x127 306 305 303 301 300 298 295 x139 281 x140 280 277 276 275 274} {curve 247 x120 234 x121 238 240 240 x126 247 x127 248 249 249 249 248 245 243 x139 239 x140 241 241 241 242 244} {curve 357 x120 247 x121 247 248 247 x126 245 x127 243 242 240 238 237 235 232 x139 218 x140 217 214 213 212 211} {curve 222 x120 209 x121 209 211 211 x126 218 x127 219 220 220 220 219 216 214 x139 210 x140 212 212 212 213 215} {curve 378 x120 268 x121 268 269 268 x126 266 x127 264 263 261 259 258 256 253 x139 239 x140 238 235 234 233 232} {curve 241 x120 228 x121 228 230 230 x126 237 x127 238 239 239 239 238 235 233 x139 229 x140 231 231 231 232 234} {curve 10.79998779 x120 10.66278076 x121 10.32565308 10.32983398 10.58502197 x126 10.34005737 x127 10.49775696 10.75117493 10.14048767 10.92559814 10.34086609 10.67204285 10.07266235 x139 10.29975891 x140 10.33328247 10.48895264 10.5524292 10.25485229 10.31512451} {curve 9.5 x120 9.719009399 x121 9.398986816 9.034011841 9.176269531 x126 9.619155884 x127 9.964141846 9.05380249 9.47076416 9.935653687 9.320358276 9.891296387 9.636764526 x139 9.780349731 x140 9.184524536 9.317977905 9.529830933 9.928283691 9.284011841}  } 
+} 
+}
+
+zoom_window_size 7
+zoom_window_wh_size {378 142}
+transform match-move
+translate {{curve 0.6191711426 0 -0.7817687988 -1.561950684 -2.317657471 -2.928710938 -3.266204834 -2.985992432 -3.183898926 -3.963165283 -4.283782959 -4.8878479 -4.850952148 -5.05380249 -4.576202393 -4.157226563 -4.142242432 -4.293609619 -3.949462891 -4.037353516 -4.414581299 -4.769439697 -5.299133301 -5.492675781 -5.801818848 -6.596862793 -8.016021729 -9.592437744 -11.13253784 -12.92715454 -14.55303955 -15.21160889 -15.67245483 -15.96176147 -16.34481812 -16.25143433 -16.27508545 -17.00756836 -17.32366943 -17.56576538 -17.97900391 -18.22399902 -18.25064087 -18.24432373 -17.89401245 -18.83703613 -20.58334351 -22.00918579 -23.07733154 -24.75375366 -25.96786499 -25.91802979 -24.99227905 -25.80621338 -27.06616211 -28.08300781 -28.68014526 -29.39492798 -30.40924072 -30.80734253 -31.17938232 -31.77212524 -32.10107422 -32.45263672 -33.1312561 -34.0022583 -35.09692383 -36.52975464 -38.75146484 -40.60452271 -41.972229 -43.68615723 -45.28149414 -47.27139282 -48.96600342 -50.05807495 -50.76251221 -51.5196228 -51.95932007 -52.31555176 -52.57104492 -52.88165283 -53.06283569 -53.46716309 -54.00985718 -55.72744751 -56.87704468 -58.42678833 -60.21212769 -63.36999512 -65.65484619 -67.92922974 -68.97485352 -70.06231689 -72.65563965 -75.45004272 -76.93203735 -76.50262451 -73.95095825 -75.80233765 -77.00085449 -78.62057495 -80.19528198 -82.27139282 -83.4916687 -84.39498901 -85.32397461 -86.63113403 -87.71896362 -89.44073486 -90.82693481 -92.40441895 -93.91946411 -95.62207031 -97.70785522 -100.1092529 -102.221405 -104.384613 -106.1871338 -108.4667053 -109.5180359 -109.8551636 -108.8509827 -109.5957947 x126 -111.8407593 x127 -113.6830597 -114.4296417 -117.040329 -118.2552185 -119.8399506 -121.5087738 -125.1081543 x139 -138.8810577 x140 -139.8475342 -142.691864 -143.6283875 -144.9259644 -145.8656921 -146.559433 -147.160675 -148.3515778 -149.826416 -152.3282013 -155.2596588 -156.022644 -156.9090118 -159.6973114 -162.2127228 -164.5009308 -167.3086853 -169.6868896 -172.1517029 -175.2739105 -178.4664459 -181.1792297 -184.0446014 -186.9022827 -189.0617981 -190.8018951 -192.5032806 -194.0748291 -195.4972687 -196.9057007 -198.5203094 -200.2270203 -202.2698517 -204.1115723 -206.4561768 -208.7983856} {curve 1.85848999 0 -1.858306885 -3.599304199 -5.029418945 -5.846298218 -6.263595581 -6.166564941 -6.034286499 -5.734405518 -5.214126587 -4.583557129 -3.638381958 -2.312637329 -0.4214324951 1.442306519 3.014053345 3.915283203 4.502487183 4.667739868 4.25630188 3.384613037 2.181396484 1.310958862 0.4152526855 -0.7283782959 -1.670822144 -2.655990601 -3.534988403 -4.498275757 -5.159545898 -5.529724121 -5.69052124 -5.148422241 -3.847869873 -2.236968994 -0.767868042 0.7038269043 2.153030396 3.249008179 3.88772583 3.916061401 3.418762207 2.249862671 0.6408081055 -1.492218018 -3.567977905 -4.756393433 -5.674636841 -6.383392334 -6.549118042 -6.359542847 -6.265457153 -6.198028564 -5.747039795 -4.784240723 -3.418548584 -1.844161987 0.02615356445 1.397476196 2.367034912 3.051940918 3.421096802 3.312667847 2.638122559 1.627258301 0.5121917725 -0.6067962646 -1.786010742 -2.962631226 -4.064468384 -5.149719238 -5.953277588 -6.902145386 -7.40071106 -7.498352051 -7.273010254 -6.309692383 -5.042007446 -3.523956299 -2.213424683 -0.7870635986 0.4988250732 1.427185059 1.73298645 1.363891602 0.7160491943 -0.4621887207 -1.989639282 -3.743240356 -5.321350098 -6.242446899 -6.780654907 -7.257156372 -7.250701904 -7.233963013 -7.289871216 -7.453521729 -6.932037354 -6.197753906 -5.224777222 -4.239868164 -3.268157959 -2.287078857 -1.382095337 -1.056274414 -1.060882568 -1.633499146 -2.641845703 -3.861862183 -5.111862183 -6.338745117 -7.339416504 -8.494476318 -9.440124512 -10.15814209 -10.70874023 -11.14630127 -11.44143677 -11.83877563 -10.92250061 -11.24252319 -9.607498169 -9.465240479 x126 -2.022354126 x127 -0.6773681641 -0.5877075195 -0.1707458496 0.2941436768 -1.321151733 -3.750213623 -6.004745483 x139 -9.861160278 x140 -8.456985474 -8.323532104 -8.111679077 -6.713226318 -5.357498169 -3.788345337 -2.189422607 -0.755355835 -0.2035980225 0.1446838379 -0.07695007324 -0.6708831787 -1.646087646 -2.959976196 -4.492446899 -6.063156128 -7.583236694 -8.534896851 -9.168624878 -9.600372314 -9.946975708 -10.32858276 -10.77198792 -11.27575684 -11.46405029 -10.79678345 -9.71005249 -8.057281494 -6.394668579 -4.843154907 -3.325576782 -2.179351807 -1.632446289 -1.533065796 -1.845794678 -2.585372925}}
+center {{curve 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 x126 367.6808167 x127 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 x139 367.6808167 x140 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167 367.6808167} {curve 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 x126 230.14151 x127 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 x139 230.14151 x140 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151 230.14151}}
+selected_tracks 0
+name Tracker1
+xpos -370
+ypos -34
+}

@@ -1,0 +1,192 @@
+#! C:/Program Files/Nuke11.0v1/nuke-11.0.1.dll -nx
+version 11.0 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1041" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="838" stretch="1"/>
+            <splitter orientation="2">
+                <split size="625"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="368"/>
+                <splitter orientation="1">
+                    <split size="838"/>
+                    <dock id="" activePageId="Properties.1">
+                        <page id="Properties.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="1018"/>
+            <splitter orientation="2">
+                <split size="707"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+                <split size="286"/>
+                <dock id="" activePageId="uk.co.thefoundry.scripteditor.1">
+                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                </dock>
+            </splitter>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Desktop/40Y/40Y_RKM_0118_comp_v001_01.nk
+ last_frame 106
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file "Z:/_ViFX/Nuke/Nuke 2016/_TRAINING FOOTAGE/40 Years/40Y_0118/cg/1784x1080/40Y_0118_cg_rockMonster_v15.####.exr"
+ format "1784 1080 0 0 1784 1080 1 "
+ last 106
+ origlast 106
+ origset true
+ name Read1
+ xpos 142
+ ypos -268
+}
+set N6a3c8000 [stack 0]
+Dot {
+ name Dot1
+ xpos 176
+ ypos -114
+}
+Read {
+ inputs 0
+ file "Z:/_ViFX/Nuke/Nuke 2016/_TRAINING FOOTAGE/40 Years/40Y_0118/scan/1784x1080/40Y_0118_bg_v01.####.dpx"
+ format "1784 1080 0 0 1784 1080 1 "
+ last 106
+ origlast 106
+ origset true
+ name Read2
+ xpos 308
+ ypos -268
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos 308
+ ypos -118
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "A\[RGB]+B\[RGB] * (1 - A\[Alpha])"
+ xpos 33
+ ypos -19
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 1
+ name Constant1
+ label 1
+ xpos -241
+ ypos 41
+}
+Dot {
+ name Dot3
+ xpos -207
+ ypos 173
+}
+push $N6a3c8000
+Dot {
+ name Dot2
+ xpos -90
+ ypos -234
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle1
+ xpos -123
+ ypos 47
+ postage_stamp true
+}
+Merge2 {
+ inputs 2
+ operation minus
+ name Merge4
+ xpos -123
+ ypos 169
+}
+Dot {
+ name Dot4
+ xpos -89
+ ypos 210
+}
+Read {
+ inputs 0
+ file "Z:/_ViFX/Nuke/Nuke 2016/_TRAINING FOOTAGE/40 Years/40Y_0118/scan/1784x1080/40Y_0118_bg_v01.####.dpx"
+ format "1784 1080 0 0 1784 1080 1 "
+ last 106
+ origlast 106
+ origset true
+ name Read3
+ label B
+ xpos 12
+ ypos 39
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge2
+ xpos 12
+ ypos 206
+}
+Dot {
+ name Dot5
+ xpos 46
+ ypos 282
+}
+Read {
+ inputs 0
+ file "Z:/_ViFX/Nuke/Nuke 2016/_TRAINING FOOTAGE/40 Years/40Y_0118/cg/1784x1080/40Y_0118_cg_rockMonster_v15.####.exr"
+ format "1784 1080 0 0 1784 1080 1 "
+ last 106
+ origlast 106
+ origset true
+ name Read4
+ label A
+ xpos 146
+ ypos 35
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge3
+ xpos 146
+ ypos 278
+}
+Viewer {
+ frame 1
+ frame_range 1-106
+ colour_sample_bbox {-0.4977578521 0.1692825109 -0.4966367781 0.1704035848}
+ samplepoints {{-0.4977578521 0.1692825109}
+   }
+ name Viewer1
+ xpos 146
+ ypos 374
+}
