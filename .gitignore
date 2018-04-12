@@ -4,11 +4,14 @@
 /*/*/3d
 /*/*/slap
 /*/*/data
+/*/*/render
 
 **/*.nk~
+**/.DS_Store
 
 !.gitignore
 !README.md
+
 # Whitelist only roto and comp folder
 !roto/*
 !comp/*

@@ -1,0 +1,109 @@
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1001" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1241" stretch="1"/>
+            <splitter orientation="2">
+                <split size="559"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="394"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Documents/NukeProjects/GRAIN/0010/comp/REL_GRAIN_0010_comp_v001_01.nk
+ frame 69
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file "Z:/NUK-CO-0218-A1/_Training Footage/Billboard/billboard_bg_v01.####.jpg"
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ last 100
+ origlast 100
+ origset true
+ name Read1
+ xpos -68
+ ypos -129
+}
+Denoise2 {
+ lift_blacks true
+ amount 1.62
+ enable_temporal true
+ "Noise Analysis" 1
+ analysisRegion {817.5 1309.75 1003.5 1460.25}
+ "Tune Frequencies" 1
+ "Tune Channels" 1
+ needsAnalyzing false
+ hasMotion true
+ profileCurve {profile {curve 0 x0.125 0 0 0 0 0 0 0 0}}
+ serializeKnob "5.832228661e-01 5.866811275e-01 4.784294665e-01
+2.408752218e-03 1.140573993e-03 8.622127934e-04
+2.408752218e-03 1.140573993e-03 8.622127934e-04
+2.387210028e-03 1.297535608e-03 9.472026723e-04
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+9.638367337e-04 4.395688593e-04 3.052036918e-04
+9.638367337e-04 4.395688593e-04 3.052036918e-04
+6.780695403e-04 2.552604710e-04 1.836453448e-04
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+4.739209835e-04 2.883821435e-04 2.295201266e-04
+4.739209835e-04 2.883821435e-04 2.295201266e-04
+2.869171149e-04 1.490856230e-04 1.102620081e-04
+0.000000000e+00 0.000000000e+00 0.000000000e+00
+2.567992487e-04 1.434889564e-04 1.072326777e-04
+2.567992487e-04 1.434889564e-04 1.072326777e-04
+1.306028862e-04 7.832569099e-05 5.979636626e-05
+0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 0.000000000e+00 
+8828201946386050330"
+ name Denoise1
+ xpos -68
+ ypos -9
+}
+Viewer {
+ frame 69
+ frame_range 1-100
+ full_frame_processing true
+ name Viewer1
+ xpos -68
+ ypos 128
+}
+Grain2 {
+ inputs 0
+ name Grain2_1
+ label "Kodak 5248"
+ xpos 183
+ ypos -1
+ black {0 0 0}
+ minimum {0 0 0}
+}
