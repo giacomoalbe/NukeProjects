@@ -1,0 +1,679 @@
+#! C:/Program Files/Nuke11.1v2/nuke-11.1.2.dll -nx
+version 11.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1904" h="1001" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1241" stretch="1"/>
+            <splitter orientation="2">
+                <split size="559"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="394"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/ViFX-Training/Documents/NukeProjects/MORPH/0010/comp/MORPH_0010_comp_v001_01.nk
+ frame 43
+ format "1024 659 0 0 1024 659 1 "
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file C:/Users/ViFX-Training/Documents/NukeProjects/MORPH/0010/asset/scarlett_close_up.jpg
+ origset true
+ name Read1
+ xpos -98
+ ypos -148
+}
+Transform {
+ translate {-54 52}
+ scale 1.2
+ center {512 329.5}
+ name Transform1
+ xpos -98
+ ypos -62
+}
+Reformat {
+ name Reformat1
+ xpos -98
+ ypos -36
+}
+Read {
+ inputs 0
+ file C:/Users/ViFX-Training/Documents/NukeProjects/MORPH/0010/asset/hamilton_close_up.jpg
+ origset true
+ name Read2
+ xpos 40
+ ypos -149
+}
+Reformat {
+ name Reformat2
+ xpos 40
+ ypos -63
+}
+SplineWarp3 {
+ inputs 2
+ colorOverlay {0 0 0 0}
+ output_enum "AB morph"
+ mix {{curve x1 0 x50 1}}
+ view {}
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44000000 x43a4c000}
+    {a warp
+   {{1 0 0 1 x3ca72f05 1}
+    {x42480000 1 x3ca72f05 1 0 1}}    pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {cubiccurve Bezier7 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0ba4f9b x40df49ff}
+       {x43cc9ad5 x4335066d}
+       {x40ba4f9c xc0df49fd}
+       {xc0a87000 x40943ae0}
+       {x43db8777 x4312d0e5}
+       {x40a87000 xc0943b00}
+       {xc0a39bc0 x40454e80}
+       {x43e7c7db x43014f1c}
+       {x40a39b80 xc0454e40}
+       {xc0b7aa40 x3fd26a80}
+       {x43f415ff x42ed10e1}
+       {x40b7aa40 xbfd26b00}
+       {xc0cf2700 x3e867400}
+       {x440106f4 x42e3d8ba}
+       {x40cf2700 xbe867400}
+       {xc0c46b00 xc011f340}
+       {x4409e4f6 x42f1aa9e}
+       {x40c46b00 x4011f340}
+       {xc0a57b00 xc0808980}
+       {x44108d0d x4307bf55}
+       {x40a57a80 x40808940}
+       {xc0616700 xc0796c80}
+       {x441674c4 x431ea772}
+       {x40616900 x40796d00}
+       {xbfe92a00 xc0603200}
+       {x44199eb7 x43329e7f}
+       {x3fe92600 x40603140}
+       {xbfd8d000 xc06441c0}
+       {x441ee8ee x43536b91}
+       {x3fd8ce00 x406441c0}}}
+     {tx 1 x43ff30a3 x42d1ae13}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier6 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0ba4f9b x40df49ff}
+       {x43c561f2 x43167835}
+       {x40ba4f9c xc0df49fd}
+       {xc098a6b3 x40a47104}
+       {x43d19cef x42ef0238}
+       {x4098a6b5 xc0a47102}
+       {xc098d6ed x40654266}
+       {x43dd1cef x42c3cf05}
+       {x4098d6ee xc0654265}
+       {xc0b16eaf x400dabb8}
+       {x43e8d022 x42a9689f}
+       {x40b16eaf xc00dabb7}
+       {xc0cd40b0 x3f69cc33}
+       {x43f67a6f x429a9bd3}
+       {x40cd40b0 xbf69cc30}
+       {xc0ce4152 xbf93b91e}
+       {x44034a04 x4298356d}
+       {x40ce4151 x3f93b926}
+       {xc0b9ad5e xc04234e0}
+       {x440a8089 x42ac1ae1}
+       {x40b9ad5d x404234e5}
+       {xc0850f99 xc04d6d6e}
+       {x44115497 x42d0cccc}
+       {x40850f99 x404d6d71}
+       {xc01a8af1 xc047ec9c}
+       {x44155497 x42f39999}
+       {x401a8af0 x4047ec9d}
+       {xc002d83a xc0582d86}
+       {x4417a164 x43090000}
+       {x4002d838 x40582d88}}}
+     {tx 1 x43ff30a3 x42d1ae13}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve BezierCusped2 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc132aa90 x3d8e3765}
+       {x43cc4e3b x43441c70}
+       {x4132aa90 xbd8e35ff}
+       {xc122974e xbf839c74}
+       {x43e2a38d x4343d555}
+       {x4122974d x3f839c89}
+       {xc0e4345d xbe5e0424}
+       {x43f69556 x434caaaa}
+       {x40e4345d x3e5e043d}
+       {xc09c389f xbeecb2cb}
+       {x440238e4 x4345e38e}
+       {x409c389f x3eecb2df}
+       {xc0810662 xbfd3fb27}
+       {x44064aac x4350d555}
+       {x40810662 x3fd3fb2b}
+       {xc0a1edfb xbf1812ae}
+       {x440d58e4 x43582aab}
+       {x40a1edfb x3f1812b8}
+       {xc08a3abe xbbb9fe9c}
+       {x441311c8 x4356d555}
+       {x408a3abe x3bba01ca}
+       {xc0367f01 xbf5e5809}
+       {x4417eaab x435838e4}
+       {x40367f01 x3f5e5816}
+       {xc0131058 xbf70a612}
+       {x441aa38f x43600e39}
+       {x40131058 x3f70a61a}
+       {xc01e0672 xbe84bd4a}
+       {x441d6aac x436138e3}
+       {x401e0672 x3e84bd55}}}
+     {tx 1 x44026666 x43372666}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve BezierCusped1 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc12c0001 xc0dbfffb}
+       {x43c44000 x43200000}
+       {x412c0000 x40dc0000}
+       {xc1072ccd xc0820ab2}
+       {x43d9c000 x433b8000}
+       {x41072ccd x40820ab2}
+       {xc0f4ec17 xbf3f8484}
+       {x43ebc000 x43460000}
+       {x40f4ec16 x3f3f84a3}
+       {xc05bf7f1 x3f15fa86}
+       {x43fb0000 x43420000}
+       {x405bf7f1 xbf15fa82}
+       {xc05d0251 xbef62fe0}
+       {x4400e000 x433e8000}
+       {x405d0251 x3ef62ff1}
+       {xc0ca5866 xbe01800b}
+       {x44076000 x43478000}
+       {x40ca5866 x3e018041}
+       {xc0a4e9d7 x3fe5c468}
+       {x440d6000 x433f8000}
+       {x40a4e9d8 xbfe5c45d}
+       {xc080019d x40352da0}
+       {x44128000 x43380000}
+       {x4080019e xc0352d9c}
+       {xc015dbcc x40311b0b}
+       {x44158000 x43288000}
+       {x4015dbce xc0311b0a}
+       {xc01fffff x40280000}
+       {x44180000 x431e0000}
+       {x40200000 xc0280000}}}
+     {tx 1 x44026666 x43372666}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve Bezier8 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {x3f000019 x40fc0000}
+       {x43dbb973 x439e44f0}
+       {xbf000004 xc0fc0000}
+       {xbe1e0800 x40cfba40}
+       {x43db34bc x438f684b}
+       {x3e1e1000 xc0cfba40}
+       {xc09fdb80 x4084be00}
+       {x43ddaa2b x4381017c}
+       {x409fdbc0 xc084bde0}
+       {xc0e87480 x400d33c0}
+       {x43eea816 x437e832b}
+       {x40e87480 xc00d3440}
+       {xc0db9abe x3f460611}
+       {x43fde08d x436e71c0}
+       {x40db9abf xbf4605f3}
+       {xc0ba1425 xc04dd19b}
+       {x4405671f x43782aac}
+       {x40ba1423 x404dd1a0}
+       {xc0b65c47 xc010754a}
+       {x440aaaac x438431c8}
+       {x40b65c47 x4010754b}
+       {xc085cb50 xc08f6d7b}
+       {x4410071f x43848001}
+       {x4085cb4e x408f6d7d}
+       {x3e8a773c xc0ed345e}
+       {x44114bcc x4392686d}
+       {xbe8a779c x40ed345e}
+       {x3fad2997 xc08d86f1}
+       {x440f8bcc x439ee86d}
+       {xbfad299d x408d86f0}
+       {x3fc00005 xc08c0000}
+       {x440e0bcc x43a7a86d}
+       {xbfc00002 x408c0000}}}
+     {tx 1 x4402a5d1 x438cd746}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier5 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {x3f000019 x40fc0000}
+       {x43d78000 x439e0000}
+       {xbf000004 xc0fc0000}
+       {xc0299693 x40cda033}
+       {x43d68000 x438e4000}
+       {x40299697 xc0cda032}
+       {xc0afdc2c x406a7aed}
+       {x43e18000 x4385c000}
+       {x40afdc2e xc06a7ae8}
+       {xc0d20516 x3f3dee5c}
+       {x43ed0000 x437e8000}
+       {x40d20516 xbf3dee57}
+       {xc0e573ef xbeaed217}
+       {x43fe4000 x43828000}
+       {x40e573ef x3eaed23c}
+       {xc0ce7c57 xbd74b835}
+       {x44064000 x4380c000}
+       {x40ce7c57 x3d74b94b}
+       {xc0b0d5c8 xbf7d273e}
+       {x440ca000 x4382c000}
+       {x40b0d5c8 x3f7d2743}
+       {xc08f7724 xc0583cd5}
+       {x44122000 x43850000}
+       {x408f7723 x40583cd8}
+       {xbf3af545 xc0c5947a}
+       {x44154000 x438fc000}
+       {x3f3af51c x40c5947b}
+       {x3fad2997 xc08d86f1}
+       {x44138000 x439c4000}
+       {xbfad299d x408d86f0}
+       {x3fc00005 xc08c0000}
+       {x44120000 x43a50000}
+       {xbfc00002 x408c0000}}}
+     {tx 1 x4402a5d1 x438cd746}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve Bezier9 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc09e0700 xbeb0dc00}
+       {x44122349 x43e0b42e}
+       {x40f24a80 x3f079600}
+       {xc060772f x3fb3d20b}
+       {x441794e9 x43e068d5}
+       {x40607730 xbfb3d208}
+       {xc06e5d68 x3f228595}
+       {x441c1584 x43de1394}
+       {x406e5d69 xbf228587}
+       {xc05af1ba xbe8e5816}
+       {x44206f41 x43de3f3f}
+       {x405af1ba x3e8e581a}
+       {xc03f062c xbf762f93}
+       {x44243f43 x43df7886}
+       {x403f062b x3f762f9b}
+       {xbfe3e80e xbfb67ba7}
+       {x442760d4 x43e2b8b0}
+       {x3fe3e80e x3fb67ba7}
+       {xbfae30f8 xbfea4e10}
+       {x44291d3c x43e6c044}
+       {x3fae30f6 x3fea4e11}
+       {xbfbb4f8e xbff48272}
+       {x442a8625 x43eb2f27}
+       {x3fbb4f8e x3ff48272}}}
+     {tx 1 x43beeb33 x43e6e333}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier4 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc09e0700 xbeb0dc00}
+       {x4416426b x43e66128}
+       {x40f24a80 x3f079600}
+       {xc060772f x3fb3d20b}
+       {x441bb40b x43e615cf}
+       {x40607730 xbfb3d208}
+       {xc06e5d68 x3f228595}
+       {x442034a6 x43e3c08e}
+       {x406e5d69 xbf228587}
+       {xc078f381 x3e040a0f}
+       {x4424ed86 x43e32df6}
+       {x4078f381 xbe0409d9}
+       {xc06be5b6 xbed38b02}
+       {x44293f43 x43e3cb90}
+       {x406be5b6 x3ed38b0f}
+       {xc0545cc9 xbf074335}
+       {x442ca604 x43e61990}
+       {x40545cc9 x3f074343}
+       {xbfac7a00 xbf5cee00}
+       {x442fc504 x43e90c62}
+       {x3f8c8a00 x3f340400}
+       {xbfa93200 xbf66cc00}
+       {x4430ac32 x43eb2f2a}
+       {x3fcafc00 x3f8a6f00}}}
+     {tx 1 x43beeb33 x43e6e333}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve Bezier10 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc08c16c6 x4013e93b}
+       {x439466c5 x43e0381d}
+       {x408c16c7 xc013e939}
+       {xc060772f x3fb3d20b}
+       {x43a01ca6 x43d8ed19}
+       {x40607730 xbfb3d208}
+       {xc06e5d68 x3f228595}
+       {x43a85ca6 x43d6e04c}
+       {x406e5d69 xbf228587}
+       {xc078f381 x3e040a0f}
+       {x43b1b63f x43d5ed19}
+       {x4078f381 xbe0409d9}
+       {xc06be5b6 xbed38b02}
+       {x43ba763f x43d646b3}
+       {x406be5b6 x3ed38b0f}
+       {xc0545cc9 xbf074335}
+       {x43c3f0e3 x43d7d380}
+       {x40545cc9 x3f074343}
+       {xbfccb7a3 xbd4f7d41}
+       {x43cb70e4 x43d9794e}
+       {x3fccb7a3 x3d4f7da7}
+       {xbfc9f4ab x3e8888e9}
+       {x43d18c92 x43d9eb9c}
+       {x3fc9f4ab xbe8888e4}}}
+     {tx 1 x43beeb33 x43e6e333}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier3 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc08c16c6 x4013e93b}
+       {x43a08000 x43eca666}
+       {x408c16c7 xc013e939}
+       {xc060772f x3fb3d20b}
+       {x43aa599a x43e77333}
+       {x40607730 xbfb3d208}
+       {xc06e5d68 x3f228595}
+       {x43b2999a x43e56666}
+       {x406e5d69 xbf228587}
+       {xc078f381 x3e040a0f}
+       {x43bbf333 x43e47333}
+       {x4078f381 xbe0409d9}
+       {xc06be5b6 xbed38b02}
+       {x43c4b333 x43e4cccd}
+       {x406be5b6 x3ed38b0f}
+       {xc0545cc9 xbf074335}
+       {x43cce666 x43e6599a}
+       {x40545cc9 x3f074343}
+       {xbfccb7a3 xbd4f7d41}
+       {x43d46666 x43e74ccd}
+       {x3fccb7a3 x3d4f7da7}
+       {xbfc9f4ab x3e8888e9}
+       {x43d7f333 x43e6b333}
+       {x3fc9f4ab xbe8888e4}}}
+     {tx 1 x43beeb33 x43e6e333}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve Bezier11 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0d55556 xc089f49b}
+       {x44114d51 x43e4b701}
+       {x40d55555 x4089f49d}
+       {xc0c8db3a xc015f8ff}
+       {x441923ce x43f1bd6f}
+       {x40c8db39 x4015f903}
+       {xc09c7baf 0}
+       {x4420fa4b x43f7b30d}
+       {x409c7baf 0}
+       {xc085b628 x3f949183}
+       {x4426b096 x43f81223}
+       {x4085b628 xbf949180}
+       {xc0731369 x4005f7c9}
+       {x442c15f3 x43f2e86e}
+       {x4073136b xc005f7c5}
+       {xc0777770 x40222220}
+       {x442f6c17 x43ef5ebc}
+       {x40777771 xc022221d}}}
+     {tx 1 x43bf2aac x43f52667}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier1 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0d55556 xc089f49b}
+       {x4415b1a4 x43ebbded}
+       {x40d55555 x4089f49d}
+       {xc0c8db3a xc015f8ff}
+       {x441d31a4 x43f63310}
+       {x40c8db39 x4015f903}
+       {xc09c7baf 0}
+       {x4424b1a4 x43f7b310}
+       {x409c7baf 0}
+       {xc085b628 x3f949183}
+       {x442a1172 x43f74294}
+       {x4085b628 xbf949180}
+       {xc0731369 x4005f7c9}
+       {x442e84a6 x43f280a4}
+       {x4073136b xc005f7c5}
+       {xc0777770 x40222220}
+       {x4432de40 x43eccd71}
+       {x40777771 xc022221d}}}
+     {tx 1 x43bf2aac x43f52667}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}
+    {cubiccurve Bezier12 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0d55556 xc089f49b}
+       {x4392d0af x43ebe16f}
+       {x40d55555 x4089f49d}
+       {xc0c8db3a xc015f8ff}
+       {x43a3e881 x43f2ca36}
+       {x40c8db39 x4015f903}
+       {xc09c7baf 0}
+       {x43b76b0f x43f2e0c0}
+       {x409c7baf 0}
+       {xc085b628 x3f949183}
+       {x43c592f1 x43effb8a}
+       {x4085b628 xbf949180}
+       {xc0731369 x4005f7c9}
+       {x43ce0247 x43eb2b2b}
+       {x4073136b xc005f7c5}
+       {xc0151500 x40df0880}
+       {x43d4f6f7 x43dc83de}
+       {x3fbb9100 xc08c4c80}}}
+     {tx 1 x43bf2aac x43f52667}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab x40000000}}
+    {cubiccurve Bezier2 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0d55556 xc089f49b}
+       {x439f9b1d x43f01dd3}
+       {x40d55555 x4089f49d}
+       {xc0c8db3a xc015f8ff}
+       {x43ae9b1d x43f9d106}
+       {x40c8db39 x4015f903}
+       {xc09c7baf 0}
+       {x43bc88d4 x43fa9a29}
+       {x409c7baf 0}
+       {xc085b628 x3f949183}
+       {x43c76f38 x43f91a29}
+       {x4085b628 xbf949180}
+       {xc0731369 x4005f7c9}
+       {x43d055a0 x43f51a29}
+       {x4073136b xc005f7c5}
+       {xc0777770 x40222220}
+       {x43d908d4 x43ef66f6}
+       {x40777771 xc022221d}}}
+     {tx 1 x43bf2aac x43f52667}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}}}
+  {edge Bezier6 Bezier7
+   {cp x41100000 x41100000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x40400000}}
+     {{1 x40400000}}}
+     {{{1 x40c00000}}
+     {{1 x40c00000}}}
+     {{{1 x41100000}}
+     {{1 x41100000}}}}}
+   {a}}
+  {edge BezierCusped1 BezierCusped2
+   {cp x41100000 x41100000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x40400000}}
+     {{1 x40400000}}}
+     {{{1 x40c00000}}
+     {{1 x40c00000}}}
+     {{{1 x41100000}}
+     {{1 x41100000}}}}}
+   {a}}
+  {edge Bezier5 Bezier8
+   {cp x41200000 x41200000 0 0 0
+    {{{{1 0}}
+      {{1 0}}}
+     {{{1 x40555556}}
+      {{1 x40555556}}}
+     {{{1 x40d55556}}
+      {{1 x40d55556}}}
+     {{{1 x41200000}}
+      {{1 x41200000}}}}   cache
+    {{xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}}}
+   {a}}
+  {edge Bezier4 Bezier9
+   {cp x40e00000 x40e00000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x40155556}}
+     {{1 x40155556}}}
+     {{{1 x40955556}}
+     {{1 x40955556}}}
+     {{{1 x40e00000}}
+     {{1 x40e00000}}}}   cache
+    {{xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}}}
+   {a}}
+  {edge Bezier3 Bezier10
+   {cp x40e00000 x40e00000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x40155556}}
+     {{1 x40155556}}}
+     {{{1 x40955556}}
+     {{1 x40955556}}}
+     {{{1 x40e00000}}
+     {{1 x40e00000}}}}}
+   {a}}
+  {edge Bezier1 Bezier11
+   {cp x40a00000 x40a00000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x3fd55556}}
+     {{1 x3fd55556}}}
+     {{{1 x40555556}}
+     {{1 x40555556}}}
+     {{{1 x40a00000}}
+     {{1 x40a00000}}}}}
+   {a}}
+  {edge Bezier2 Bezier12
+   {cp x40a00000 x40a00000 0 0 0
+    {{{{1 0}}
+     {{1 0}}}
+     {{{1 x3fd55556}}
+     {{1 x3fd55556}}}
+     {{{1 x40555556}}
+     {{1 x40555556}}}
+     {{{1 x40a00000}}
+     {{1 x40a00000}}}}   cache
+    {{xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}
+     {xff7fffff x7f7fffff x7f7fffff}}}
+   {a}}}}
+ toolbar_output_a_warped false
+ toolbar_output_ab true
+ toolbar_output_enum AB
+ toolbar_preview_mode "persistent preview"
+ name SplineWarp3_1
+ selected true
+ xpos -33
+ ypos 43
+}
+Viewer {
+ frame 43
+ frame_range 1-50
+ frame_range_lock true
+ name Viewer1
+ xpos -33
+ ypos 103
+}
+SplineWarp3 {
+ inputs 0
+ colorOverlay {0 0 0 0}
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44000000 x43a4c000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {cubiccurve Bezier2 512 bezier
+     {cc
+      {f 8224}
+      {px 1
+       {xc0d55556 xc089f49b}
+       {x439e88d4 x43ef66f6}
+       {x40d55555 x4089f49d}
+       {xc0c8db3a xc015f8ff}
+       {x43ad88d4 x43f91a29}
+       {x40c8db39 x4015f903}
+       {xc09c7baf 0}
+       {x43bc88d4 x43fa9a29}
+       {x409c7baf 0}
+       {xc085b628 x3f949183}
+       {x43c76f38 x43f91a29}
+       {x4085b628 xbf949180}
+       {xc0731369 x4005f7c9}
+       {x43d055a0 x43f51a29}
+       {x4073136b xc005f7c5}
+       {xc0777770 x40222220}
+       {x43d908d4 x43ef66f6}
+       {x40777771 xc022221d}}}
+     {tx 1 x43bf2aac x43f52667}
+     {a ro 0 go 0 bo 0 ao 0 mbo 0 mb 1 mbs x3f000000 mbsot 0 mbso 0 fo 1 fx 0 fy 0 ff 1 ft 0 osw x41200000 osf 0 str 1 pt 0 ab 1}}}}}}
+ toolbar_preview_mode "persistent preview"
+ name SplineWarp3_2
+ xpos 173
+ ypos 30
+}
